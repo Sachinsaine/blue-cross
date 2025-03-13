@@ -328,7 +328,7 @@ export const Homepage = () => {
 
         <section>
           <div className="reviewsContainer">
-            <h2>Find Out What Our Clients Say About Us</h2>
+            <h2 className="mb-5">Find Out What Our Clients Say About Us</h2>
             <div className="">
               <div className="reviewCont">
                 {/* <div className=" min-h-screen flex items-center justify-center">
@@ -348,6 +348,9 @@ export const Homepage = () => {
                     <h6>48,600 reviews</h6>
                     <img src={logo} alt="" width="180" />
                   </div>
+                  {/* <div>
+                    <ReviewCarousel />
+                  </div> */}
                   <div>
                     <div className="pb-2">
                       {[...Array(5)].map((_, i) => (
@@ -405,6 +408,107 @@ export const Homepage = () => {
                       <p>12rd March 2025</p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="faq">
+          <h2 className="mb-5 text-center">FAQs – Your Questions Answered</h2>
+
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Who can apply for BlueCross UK insurance?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Our policies are available to UK residents aged 18 and above.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Can I customize my insurance plan?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Absolutely! We offer flexible plans, allowing you to select
+                  the coverage that best suits your needs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  How do I get a quote?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  You can request a free quote online, call our support team, or
+                  visit one of our branches.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Are there any hidden fees?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  No, our pricing is transparent, with no hidden costs or
+                  surprise charges.
                 </div>
               </div>
             </div>
