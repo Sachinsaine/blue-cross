@@ -1,0 +1,151 @@
+.carouseCaption {
+  position: absolute;
+  left: 10%;
+  text-align: start;
+  top: 20%;
+  color: #fff;
+  width: 40%;
+  z-index: 2;
+}
+.carouseCaption h1 {
+  font-size: 52px;
+  margin: 0px;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+.carouseCaption p {
+  font-weight: bold;
+  margin: 0px;
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-inner {
+  padding-top: 78px;
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    rgba(49, 49, 49, 0.1)
+  );
+  z-index: 1;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 0;
+}
+.mainData {
+  padding: 0 80px;
+}
+.blueCross {
+  margin-top: 40px;
+}
+.twoColumGrid {
+  margin: 50px 0px;
+}
+main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 3rem 0rem;
+  text-align: center;
+}
+.ourServices h3 {
+  margin-bottom: 2rem;
+}
+.fourColumGrid {
+  text-align: center;
+}
+.fourColumGrid ul {
+  padding: 0;
+  margin: 0;
+}
+.fourColumGrid ul li {
+  list-style: none;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0;
+}
+.ourServices img {
+  width: 20px;
+}
+
+.fourColumGrid > div {
+  padding: 20px 10px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0px 0px 30px;
+}
+.fourColumGrid h4 {
+  font-size: 20px;
+}
+.whyChooseUs {
+  padding: 54px 80px;
+  background: var(--secondary-color);
+}
+.chooseUs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.whyChooseUs h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.chooseUs div {
+  padding: 20px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  margin: 0px 0px 30px;
+  width: 30%;
+  cursor: pointer;
+}
+.chooseUs h3 {
+  font-size: 20px;
+  margin: 20px 0px 5px 0px;
+}
+.chooseUs div:hover {
+  transform: translate(0px, -10px);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.reviewCont {
+  margin: 0px 80px;
+}
+.reviewsCont {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 36px;
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+}
+.reviewer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviewer p {
+  margin: 0px;
+}
+.reviewsContainer {
+  padding: 60px 0px 40px;
+}
+.reviewsContainer h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.reviewsCont h3 {
+  margin: 0px;
+}

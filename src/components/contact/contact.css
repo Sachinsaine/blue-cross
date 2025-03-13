@@ -1,0 +1,86 @@
+.lifePara {
+  font-size: 42px;
+  padding-top: 60px;
+}
+.contactBg {
+  background: var(--primary-color);
+  color: white;
+  padding: 0px 80px 30px;
+}
+.contactCont {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+.officeDetails {
+  padding: 60px 80px;
+  text-align: center;
+}
+.font18 {
+  font-size: 18px;
+}
+.box {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #80808091;
+}
+input,
+select {
+  height: 46px;
+}
+.btnSubmit {
+  padding: 12px 46px;
+  border: 1px solid #fff;
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnSubmit:hover {
+  background: #0a77a5;
+  color: #fff;
+  border: none;
+}
+.listenPara {
+  color: var(--primary-color);
+}
+.query {
+  max-width: 728px;
+  margin: 70px auto 30px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0px 0px 20px;
+  border-radius: 5px;
+}
+.imageQuery {
+  min-width: 263px;
+  margin-top: -38px;
+}
+.textt {
+  width: 300px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 7%;
+}
+
+.formInputsCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+.bi-geo-alt-fill,
+.bi-telephone-fill,
+.bi-envelope-fill {
+  font-size: 16px;
+}
+#formCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
