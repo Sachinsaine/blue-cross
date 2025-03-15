@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img01 from "../../assets/iStock-1150572145-scaled-e1671122212776-1200x800.jpg";
 import img02 from "../../assets/iStock-979623466-scaled-e1671122392323-1200x800.jpg";
 import img03 from "../../assets/Research-1200x801.jpeg";
@@ -14,7 +14,25 @@ import logo from "../../assets/BlueCross_Logo.webp";
 import ReviewCarousel from "./ReviewCarousel";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+
 export const Homepage = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const questions = [
+    "Who can apply for BlueCross UK insurance?",
+    "Can I customize my insurance plan?",
+    "How do I get a quote?",
+    "Are there any hidden fees?",
+  ];
+
+  const answers = [
+    "Our policies are available to UK residents aged 18 and above.",
+    "Absolutely! We offer flexible plans, allowing you to select the coverage that best suits your needs.",
+    "You can request a free quote online, call our support team, or visit one of our branches.",
+    "No, our pricing is transparent, with no hidden costs or surprise charges.",
+  ];
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
   return (
     <>
       <div id="carouselExampleCaptions" className="carousel slide">
@@ -416,101 +434,22 @@ export const Homepage = () => {
         <section className="faq">
           <h2 className="mb-5 text-center">FAQs – Your Questions Answered</h2>
 
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
+          <div class="newAccordion">
+            <div>
+              {questions.map((question, index) => (
+                <h6
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  className={
+                    activeIndex === index ? "question active" : "question"
+                  }
                 >
-                  Who can apply for BlueCross UK insurance?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Our policies are available to UK residents aged 18 and above.
-                </div>
-              </div>
+                  {question}
+                </h6>
+              ))}
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  Can I customize my insurance plan?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Absolutely! We offer flexible plans, allowing you to select
-                  the coverage that best suits your needs.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseThree"
-                >
-                  How do I get a quote?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseThree"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  You can request a free quote online, call our support team, or
-                  visit one of our branches.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFour"
-                >
-                  Are there any hidden fees?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseFour"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  No, our pricing is transparent, with no hidden costs or
-                  surprise charges.
-                </div>
-              </div>
+            <div>
+              <p>{answers[activeIndex]}</p>
             </div>
           </div>
         </section>
