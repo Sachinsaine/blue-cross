@@ -11,24 +11,25 @@ import insurance03 from "../../assets/insurances/car-insurance.mp4";
 import insurance04 from "../../assets/insurances/airplane.mp4";
 import checkIcon from "../../assets/insurances/checkmark.png";
 import logo from "../../assets/BlueCross_Logo.webp";
-import ReviewCarousel from "./ReviewCarousel";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 
 export const Homepage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const questions = [
-    "Who can apply for BlueCross UK insurance?",
+    "Who can apply for BlueCross UK Insurance?",
     "Can I customize my insurance plan?",
     "How do I get a quote?",
+    "Does BlueCross cover pre-existing conditions?",
     "Are there any hidden fees?",
   ];
 
   const answers = [
-    "Our policies are available to UK residents aged 18 and above.",
-    "Absolutely! We offer flexible plans, allowing you to select the coverage that best suits your needs.",
+    "Anyone who is a legal UK resident, including individuals, families, self-employed professionals, students, and expatriates with valid residency permits, can apply.",
+    "Yes! You can personalize your plan by selecting different coverage levels, adding optional benefits (like dental, optical, or mental health coverage), and adjusting your excess to suit your budget.",
     "You can request a free quote online, call our support team, or visit one of our branches.",
-    "No, our pricing is transparent, with no hidden costs or surprise charges.",
+    "Coverage for pre-existing conditions varies by plan. Some policies may require medical underwriting, while others offer coverage with certain conditions. Contact us to find the best option for your needs.",
+    "No! BlueCross UK Insurance follows a transparent pricing policy. All charges are clearly mentioned in your policy documents, with no unexpected costs or surprise fees.",
   ];
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -356,12 +357,9 @@ export const Homepage = () => {
                   <div>
                     <h3>Excellent</h3>
                     {[...Array(4)].map((_, i) => (
-                      <FaStar
-                        key={i}
-                        className="text-yellow-500 me-2 text-xl"
-                      />
+                      <FaStar key={i} className="text-warning me-2 text-xl" />
                     ))}
-                    <FaStarHalfAlt className="text-yellow-500 text-xl" />
+                    <FaStarHalfAlt className="text-warning text-xl" />
                     <p className="m-0">See our reviews on</p>
                     <h6>48,600 reviews</h6>
                     <img src={logo} alt="" width="180" />
@@ -372,10 +370,7 @@ export const Homepage = () => {
                   <div>
                     <div className="pb-2">
                       {[...Array(5)].map((_, i) => (
-                        <FaStar
-                          key={i}
-                          className="text-yellow-500 me-2 text-xl"
-                        />
+                        <FaStar key={i} className="text-warning me-2 text-xl" />
                       ))}
                     </div>
                     <p>
@@ -391,10 +386,7 @@ export const Homepage = () => {
                   <div>
                     <div className="pb-2">
                       {[...Array(5)].map((_, i) => (
-                        <FaStar
-                          key={i}
-                          className="text-yellow-500 me-2 text-xl"
-                        />
+                        <FaStar key={i} className="text-warning me-2 text-xl" />
                       ))}
                     </div>
                     <p>
@@ -410,10 +402,7 @@ export const Homepage = () => {
                   <div>
                     <div className="pb-2">
                       {[...Array(5)].map((_, i) => (
-                        <FaStar
-                          key={i}
-                          className="text-yellow-500 me-2 text-xl"
-                        />
+                        <FaStar key={i} className="text-warning me-2 text-xl" />
                       ))}
                     </div>
                     <p>
