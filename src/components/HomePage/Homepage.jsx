@@ -13,6 +13,7 @@ import checkIcon from "../../assets/insurances/checkmark.png";
 import logo from "../../assets/BlueCross_Logo.webp";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { Field, Form, Formik } from "formik";
 
 export const Homepage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,7 +21,7 @@ export const Homepage = () => {
     "Who can apply for BlueCross UK Insurance?",
     "Can I customize my insurance plan?",
     "How do I get a quote?",
-    "Does BlueCross cover pre-existing conditions?",
+    "How do I make a claim?",
     "Are there any hidden fees?",
   ];
 
@@ -28,7 +29,7 @@ export const Homepage = () => {
     "Anyone who is a legal UK resident, including individuals, families, self-employed professionals, students, and expatriates with valid residency permits, can apply.",
     "Yes! You can personalize your plan by selecting different coverage levels, adding optional benefits (like dental, optical, or mental health coverage), and adjusting your excess to suit your budget.",
     "You can request a free quote online, call our support team, or visit one of our branches.",
-    "Coverage for pre-existing conditions varies by plan. Some policies may require medical underwriting, while others offer coverage with certain conditions. Contact us to find the best option for your needs.",
+    "Simply log into your online account or call our 24/7 claims support line.",
     "No! BlueCross UK Insurance follows a transparent pricing policy. All charges are clearly mentioned in your policy documents, with no unexpected costs or surprise fees.",
   ];
   const handleClick = (index) => {
@@ -423,7 +424,7 @@ export const Homepage = () => {
         <section className="faq">
           <h2 className="mb-5 text-center">FAQs – Your Questions Answered</h2>
 
-          <div class="newAccordion">
+          <div className="newAccordion">
             <div>
               {questions.map((question, index) => (
                 <h6
@@ -439,6 +440,35 @@ export const Homepage = () => {
             </div>
             <div>
               <p>{answers[activeIndex]}</p>
+            </div>
+          </div>
+        </section>
+        <section className="quoteCont">
+          <h2 className="text-center pb-4">Request a quote</h2>
+          <div className="quoteContainer">
+            <div className="d-flex flex-column align-item-center gap-3">
+              <img src={logo} width="200" alt="" />
+              <p>
+                Join thousands of satisfied customers who trust BlueCross UK for
+                their insurance needs. Get a free, no-obligation quote today and
+                enjoy peace of mind with the right coverage.
+              </p>
+            </div>
+            <div>
+              <Formik>
+                <Form>
+                  <div className="quoteForm">
+                    <Field type="text" placeholder="Full Name" />
+                    <Field type="email" placeholder="Email Address" />
+                    <Field type="number" placeholder="Mobile Number" />
+                  </div>
+                  <div className="quoteForm">
+                    <Field type="text" placeholder="State" />
+                    <Field type="text" placeholder="Zipcode" />
+                    <button className="bttn">Submit</button>
+                  </div>
+                </Form>
+              </Formik>
             </div>
           </div>
         </section>
