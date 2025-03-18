@@ -14,6 +14,7 @@ import logo from "../../assets/BlueCross_Logo.webp";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { Field, Form, Formik } from "formik";
+import ReviewsSection from "./ReviewCarousel";
 
 export const Homepage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -26,18 +27,23 @@ export const Homepage = () => {
   ];
 
   const answers = [
-    "Anyone who is a legal UK resident, including individuals, families, self-employed professionals, students, and expatriates with valid residency permits, can apply.",
-    "Yes! You can personalize your plan by selecting different coverage levels, adding optional benefits (like dental, optical, or mental health coverage), and adjusting your excess to suit your budget.",
-    "You can request a free quote online, call our support team, or visit one of our branches.",
-    "Simply log into your online account or call our 24/7 claims support line.",
-    "No! BlueCross UK Insurance follows a transparent pricing policy. All charges are clearly mentioned in your policy documents, with no unexpected costs or surprise fees.",
+    "BlueCross UK Insurance is available to a wide range of individuals, ensuring financial security and peace of mind. UK residents, including permanent residents, expatriates with valid visas, and international students studying in the UK, are eligible to apply. Working professionals, whether employed full-time, part-time, or self-employed, can also benefit from our insurance plans. Business owners seeking coverage for themselves and their employees are welcome to apply. Families and dependents, including spouses, children, and elderly parents, can be covered under eligible plans. Visitors and expatriates in the UK looking for temporary or travel insurance can find suitable options with BlueCross. Additionally, retirees and senior citizens seeking health or life insurance can explore policies tailored to their needs. Eligibility may vary depending on the specific policy, so feel free to contact us for personalized assistance.",
+    "Yes, BlueCross UK allows you to customize your insurance plan to match your specific needs. You can choose from various coverage options, add extra benefits, and adjust your policy based on your lifestyle, budget, and requirements. Whether you need additional coverage for specific medical conditions, international travel protection, or enhanced family benefits, our flexible plans let you tailor your insurance to ensure complete peace of mind. Our team is here to help you create a plan that works best for you. Contact us to explore your options and get personalized recommendations.",
+    "Getting a quote for your BlueCross UK insurance plan is quick and easy. Simply visit our website and use the online quote tool by entering your details and coverage preferences. You can also contact our customer support team for a personalized quote based on your specific needs. Whether you're looking for health, life, or travel insurance, our experts will guide you through the process and help you find the best plan at a competitive price. Get started today and secure the coverage that suits you best.",
+    "Filing a claim with BlueCross UK is a simple and hassle-free process. You can start by logging into your account on our website and submitting the necessary details through our online claims portal. Alternatively, you can contact our claims support team for assistance. Ensure you have all relevant documents, such as medical reports, invoices, or policy details, to speed up the process. Once your claim is submitted, our team will review it and keep you updated on the status. We are committed to making the claims process smooth and efficient, ensuring you get the support you need when it matters most.",
+    "At BlueCross UK, transparency is our priority. There are no hidden fees in our insurance plans. All costs, including premiums, deductibles, and any additional charges, are clearly outlined in your policy documents. Before finalizing your plan, you will receive a detailed breakdown of costs to ensure complete clarity. If you have any questions about fees or charges, our team is always available to provide full transparency and assist you in understanding your policy.",
   ];
   const handleClick = (index) => {
     setActiveIndex(index);
   };
   return (
     <>
-      <div id="carouselExampleCaptions" className="carousel slide">
+      <div
+        id="carouselExampleCaptions"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000" // Auto-slide every 3 seconds
+      >
         <div className="carousel-indicators">
           <button
             type="button"
@@ -66,13 +72,18 @@ export const Homepage = () => {
             aria-label="Slide 4"
           ></button>
         </div>
+
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img01} className="d-block w-100" height="600" alt="..." />
-
+            <img
+              src={img01}
+              className="d-block w-100"
+              height="600"
+              alt="Slide 1"
+            />
             <div className="carouseCaption">
               <h1>
-                Choose the UK's top rated travel insurance for peace of mind on
+                Choose the UK's top-rated travel insurance for peace of mind on
                 your journey.
               </h1>
               <p>
@@ -81,8 +92,14 @@ export const Homepage = () => {
               </p>
             </div>
           </div>
+
           <div className="carousel-item">
-            <img src={img02} className="d-block w-100" height="600" alt="..." />
+            <img
+              src={img02}
+              className="d-block w-100"
+              height="600"
+              alt="Slide 2"
+            />
             <div className="carouseCaption">
               <h1>
                 Join the UK’s leading health benefits provider for trusted care.
@@ -93,8 +110,14 @@ export const Homepage = () => {
               </p>
             </div>
           </div>
+
           <div className="carousel-item">
-            <img src={img03} className="d-block w-100" height="600" alt="..." />
+            <img
+              src={img03}
+              className="d-block w-100"
+              height="600"
+              alt="Slide 3"
+            />
             <div className="carouseCaption">
               <h1>
                 Enjoy customised group benefits trusted by millions in the UK.
@@ -105,20 +128,27 @@ export const Homepage = () => {
               </p>
             </div>
           </div>
+
           <div className="carousel-item">
-            <img src={img04} className="d-block w-100" height="600" alt="..." />
+            <img
+              src={img04}
+              className="d-block w-100"
+              height="600"
+              alt="Slide 4"
+            />
             <div className="carouseCaption">
               <h1>
                 Safeguard your loved ones with reliable and comprehensive
                 coverage in the UK.
               </h1>
               <p>
-                Protect your financial wellbeing with the UK's most respected
+                Protect your financial well-being with the UK's most respected
                 life insurance provider.
               </p>
             </div>
           </div>
         </div>
+
         <button
           className="carousel-control-prev"
           type="button"
@@ -131,6 +161,7 @@ export const Homepage = () => {
           ></span>
           <span className="visually-hidden">Previous</span>
         </button>
+
         <button
           className="carousel-control-next"
           type="button"
@@ -144,6 +175,7 @@ export const Homepage = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
       <main>
         <div className="mainData">
           <h1>Welcome to BlueCross UK – Protecting Your Future</h1>
@@ -347,79 +379,7 @@ export const Homepage = () => {
         </section>
 
         <section>
-          <div className="reviewsContainer">
-            <h2 className="mb-5">Find Out What Our Clients Say About Us</h2>
-            <div className="">
-              <div className="reviewCont">
-                {/* <div className=" min-h-screen flex items-center justify-center">
-                  <ReviewCarousel />
-                </div> */}
-                <div className="reviewsCont">
-                  <div>
-                    <h3>Excellent</h3>
-                    {[...Array(4)].map((_, i) => (
-                      <FaStar key={i} className="text-warning me-2 text-xl" />
-                    ))}
-                    <FaStarHalfAlt className="text-warning text-xl" />
-                    <p className="m-0">See our reviews on</p>
-                    <h6>48,600 reviews</h6>
-                    <img src={logo} alt="" width="180" />
-                  </div>
-                  {/* <div>
-                    <ReviewCarousel />
-                  </div> */}
-                  <div>
-                    <div className="pb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-warning me-2 text-xl" />
-                      ))}
-                    </div>
-                    <p>
-                      "Blue-cross were helpful because our account manager is
-                      always available to help with any queries or questions we
-                      have."
-                    </p>
-                    <div className="reviewer">
-                      <p>Virat Kohli</p>
-                      <p>12rd March 2025</p>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="pb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-warning me-2 text-xl" />
-                      ))}
-                    </div>
-                    <p>
-                      "Blue-cross were helpful because our account manager is
-                      always available to help with any queries or questions we
-                      have."
-                    </p>
-                    <div className="reviewer">
-                      <p>Virat Kohli</p>
-                      <p>12rd March 2025</p>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="pb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-warning me-2 text-xl" />
-                      ))}
-                    </div>
-                    <p>
-                      "Blue-cross were helpful because our account manager is
-                      always available to help with any queries or questions we
-                      have."
-                    </p>
-                    <div className="reviewer">
-                      <p>Virat Kohli</p>
-                      <p>12rd March 2025</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ReviewsSection />
         </section>
         <section className="faq">
           <h2 className="mb-5 text-center">FAQs – Your Questions Answered</h2>

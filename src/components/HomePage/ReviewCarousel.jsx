@@ -1,90 +1,110 @@
 import React from "react";
 import Slider from "react-slick";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Star } from "lucide-react";
+import logo from "../../assets/BlueCross_Logo.webp";
 
-const reviews = [
-  {
-    rating: 5,
-    title: "My experience at...",
-    text: "My experience at Excellence Motors was positive because I am satisfied.",
-    author: "John Smith",
-    date: "12/03/2025",
-    source: "JudgeService",
-  },
-  {
-    rating: 5,
-    title: "Excellence Motors were...",
-    text: "Top-tier! Motors were really helpful and I recommend them because good value.",
-    author: "Jane Doe",
-    date: "10/03/2025",
-    source: "Google",
-  },
-  {
-    rating: 4.5,
-    title: "I'd definitely recommend",
-    text: "I'd definitely recommend Excellence Motors to friends and family because it's...",
-    author: "Michael Brown",
-    date: "09/03/2025",
-    source: "JudgeService",
-  },
-];
+const ReviewsSection = () => {
+  const reviews = [
+    {
+      name: "Virat Kohli",
+      date: "12th March 2025",
+      text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
+    },
+    {
+      name: "Rohit Sharma",
+      date: "10th March 2025",
+      text: "Exceptional service! The claims process was smooth and efficient. Highly recommend BlueCross.",
+    },
+    {
+      name: "Ben Stokes",
+      date: "8th March 2025",
+      text: "Great experience! Their team guided me through the process seamlessly. Thank you, BlueCross!",
+    },
+    {
+      name: "MS Dhoni",
+      date: "5th March 2025",
+      text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
+    },
+    {
+      name: "Joe Root",
+      date: "3rd March 2025",
+      text: "BlueCross provides excellent coverage and quick claim settlements. Highly recommended.",
+    },
+  ];
 
-const ReviewCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 3, // Display 3 reviews at a time
+    slidesToScroll: 3, // Scroll 3 at a time
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+        breakpoint: 1024, // Tablets
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
       {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        breakpoint: 768, // Mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   };
 
   return (
-    <div className="max-w-5xl mx-auto py-8">
-      <h2 className="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
-      <Slider {...settings}>
-        {reviews.map((review, index) => (
-          <div key={index} className="p-4 bg-white">
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-2 bg-white">
-                {[...Array(Math.floor(review.rating))].map((_, i) => (
-                  <Star key={i} className="text-yellow-500" fill="yellow" />
-                ))}
-                {review.rating % 1 !== 0 && (
-                  <Star
-                    className="text-yellow-500"
-                    fill="yellow"
-                    opacity="50%"
-                  />
-                )}
-              </div>
-              <h3 className="text-lg font-semibold">{review.title}</h3>
-              <p className="text-gray-600 mt-2">{review.text}</p>
-              <p className="text-sm text-gray-400 mt-2">
-                - {review.author}, {review.date}
-              </p>
-              <p className="text-xs text-blue-500 mt-1">
-                Source: {review.source}
-              </p>
-            </div>
+    <section>
+      <div className="reviewsContainer">
+        <h2 className="mb-5">Find Out What Our Clients Say About Us</h2>
+        <div className="reviewCont">
+          {/* Fixed "Excellent" Box */}
+          <div className="fixed-box">
+            <h3>Excellent</h3>
+            {[...Array(4)].map((_, i) => (
+              <FaStar key={i} className="text-warning me-2 text-xl" />
+            ))}
+            <FaStarHalfAlt className="text-warning text-xl" />
+            <p className="m-0">See our reviews on</p>
+            <h6>48,600 reviews</h6>
+            <img
+              src={logo}
+              alt="Review Platform"
+              className="logoImg"
+              width="180"
+            />
           </div>
-        ))}
-      </Slider>
-    </div>
+
+          {/* Carousel for Reviews */}
+          <div className="carousel-container">
+            <Slider {...settings}>
+              {reviews.map((review, index) => (
+                <div key={index} className="review-box">
+                  <div className="pb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="text-warning me-2 text-xl" />
+                    ))}
+                  </div>
+                  <p>"{review.text}"</p>
+                  <div className="reviewer">
+                    <p>{review.name}</p>
+                    <p>{review.date}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default ReviewCarousel;
+export default ReviewsSection;

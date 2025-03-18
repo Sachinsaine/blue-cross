@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
