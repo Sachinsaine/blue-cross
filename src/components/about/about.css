@@ -1,0 +1,32 @@
+.aboutCont {
+  padding-top: 78px;
+}
+.aboutPage {
+  padding: 20px 80px 20px 80px;
+}
+.compresive {
+  background-color: var(--primary-color);
+  padding: 30px 80px;
+  color: #fff;
+}
+.threeColumGrid div {
+  padding: 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+.fourColumGrids {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.fourColumGrids div {
+  padding: 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  text-align: start;
+}

@@ -199,8 +199,7 @@ export const Contact = () => {
                 <div className="box">
                   <p className="m-0 font18">Find our office at</p>
                   <p className="m-0 fw-bold font26">
-                    <i className="bi bi-geo-alt-fill "></i> POST ASSURANCE
-                    BROKERS LIMITED
+                    <i className="bi bi-geo-alt-fill "></i> BLUE CROSS LIMITED
                   </p>
                   <p className="m-0 font26">
                     99, White Lion Street, London, United Kingdom N1 9PF
@@ -218,7 +217,7 @@ export const Contact = () => {
                   <p className="m-0 font18 font26">Write us</p>
                   <p className="m-0 fw-bold font26">
                     <i className="bi bi-envelope-fill"></i>{" "}
-                    info@postassurancebrokers.co.uk
+                    info@bluecreoss.co.uk
                   </p>
                 </div>
               </div>

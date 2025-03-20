@@ -6,7 +6,7 @@ ul {
   color: #7e7e7e;
   position: relative;
   border-top: 1px solid #7e7e7e;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 .footer-cta {
   border-bottom: 1px solid #373636;

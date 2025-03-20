@@ -1,3 +1,6 @@
+.contactContainer {
+  padding-top: 78px;
+}
 .lifePara {
   font-size: 42px;
   padding-top: 60px;
@@ -30,6 +33,7 @@ input,
 select {
   height: 46px;
 }
+
 .btnSubmit {
   padding: 12px 46px;
   border: 1px solid #fff;
