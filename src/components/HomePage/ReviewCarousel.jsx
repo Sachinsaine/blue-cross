@@ -63,22 +63,23 @@ const ReviewsSection = () => {
   return (
     <section>
       <div className="reviewsContainer">
-        <h2 className="mb-5">Find Out What Our Clients Say About Us</h2>
+        <h2 className="mb-3">Find Out What Our Clients Say About Us</h2>
         <div className="reviewCont">
           {/* Fixed "Excellent" Box */}
           <div className="fixed-box">
             <h3>Excellent</h3>
             {[...Array(4)].map((_, i) => (
-              <FaStar key={i} className="text-warning me-2 text-xl" />
+              <FaStar key={i} className="text-warning me-2 fs-3" />
             ))}
-            <FaStarHalfAlt className="text-warning text-xl" />
-            <p className="m-0">See our reviews on</p>
-            <h6>48,600 reviews</h6>
+            <FaStarHalfAlt className="text-warning fs-3" />
+            <p className="my-2">
+              Based on <u>4,072 reviews</u>{" "}
+            </p>
             <img
               src={logo}
               alt="Review Platform"
               className="logoImg"
-              width="180"
+              width="165"
             />
           </div>
 

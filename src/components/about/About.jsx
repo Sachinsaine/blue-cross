@@ -66,7 +66,7 @@ export const About = () => {
             <b>seamless, customer-centric insurance solutions </b> that put your
             well-being first.
           </p>
-          <div className="fourColumGrids">
+          <div className="threeColumGrid">
             <div>
               <h4>Customer Satisfaction First </h4>
               <p>
@@ -86,13 +86,6 @@ export const About = () => {
               <p>
                 Our expert support team is always available to guide you through
                 your insurance journey.
-              </p>
-            </div>
-            <div>
-              <h4>Holistic Well-Being </h4>
-              <p>
-                Beyond medical coverage, we offer wellness benefits, mental
-                health support, and preventive care options.
               </p>
             </div>
           </div>
