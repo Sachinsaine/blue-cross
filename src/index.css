@@ -45,3 +45,6 @@ body {
 .open-sans-bold {
   font-weight: 700;
 }
+.textColor {
+  color: var(--primary-color);
+}

@@ -8,7 +8,7 @@ export const About = () => {
         <section>
           <div className="aboutHeading">
             <div>
-              <h2>OUR MISSION</h2>
+              <h2 className="textColor">OUR MISSION</h2>
               <p className="misionPara">
                 At BlueCross, we are committed to simplifying lives by providing
                 efficient, cost-effective, and hassle-free insurance solutions,
@@ -113,6 +113,37 @@ export const About = () => {
               <p>
                 Our expert support team is always available to guide you through
                 your insurance journey.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="aboutHeading">
+            <div>
+              <img
+                src="https://www.iselect.com.au/wp-content/uploads/2024/02/056A9905-Enhanced-NR-Edit-768x512.jpg"
+                alt=""
+                width="400"
+              />
+            </div>
+            <div>
+              <h2 className="textColor">WHO WE ARE</h2>
+              <p className="misionPara">
+                At BlueCross, we take pride in being a trusted leader in the UK
+                insurance industry, offering expert guidance and comprehensive
+                insurance solutions for over two decades.
+              </p>
+              <p>
+                With our deep industry expertise, we simplify the complexities
+                of insurance comparison, ensuring you make informed decisions
+                with ease.
+              </p>
+              <p>
+                BlueCross is more than just an insurance provider—we are
+                committed to delivering a personalised experience. Our UK-based
+                insurance specialists are dedicated to helping you find the
+                right coverage while saving you time and money. Let us assist
+                you in securing a policy that truly meets your needs.
               </p>
             </div>
           </div>
