@@ -27,4 +27,18 @@ app.get("/assets", async (req, res) => {
   }
 });
 
+app.get("/carousel", (req, res) => {
+  mongoclient.connect(conString).then((clientObj) => {
+    var database = clientObj.db("blue-cross");
+    database
+      .collection("tbl-carousel")
+      .find({})
+      .toArray()
+      .then((docs) => {
+        res.send(docs);
+        res.end();
+      });
+  });
+});
+
 app.listen(2000, () => console.log(`Server started at: http://127.0.0.1:2000`));

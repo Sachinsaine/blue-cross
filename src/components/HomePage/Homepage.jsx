@@ -42,7 +42,7 @@ export const Homepage = () => {
           id="carouselExampleCaptions"
           className="carousel slide"
           data-bs-ride="carousel"
-          data-bs-interval="3000" // Auto-slide every 3 seconds
+          data-bs-interval="3000"
         >
           <div className="carousel-indicators">
             <button
