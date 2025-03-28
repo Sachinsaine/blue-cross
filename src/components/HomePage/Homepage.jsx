@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img01 from "../../assets/iStock-1150572145-scaled-e1671122212776-1200x800.jpg";
 import img02 from "../../assets/iStock-979623466-scaled-e1671122392323-1200x800.jpg";
 import img03 from "../../assets/Research-1200x801.jpeg";
@@ -13,6 +13,7 @@ import checkIcon from "../../assets/insurances/checkmark.png";
 import logo from "../../assets/BlueCross_Logo.webp";
 import { Field, Form, Formik } from "formik";
 import ReviewsSection from "./ReviewCarousel";
+import axios from "axios";
 
 export const Homepage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,6 +35,17 @@ export const Homepage = () => {
   const handleClick = (index) => {
     setActiveIndex(index);
   };
+  const [chooseus, setChooseus] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:2000/ychooseus")
+      .then((res) => {
+        setChooseus(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
@@ -304,80 +316,13 @@ export const Homepage = () => {
           <section className="whyChooseUs">
             <h2>Why Choose BlueCross UK?</h2>
             <div className="chooseUs">
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/17485/17485564.png"
-                  width="60"
-                  alt=""
-                />
-                <h3>Affordable & Custom Plans</h3>
-                <p>
-                  At BlueCross UK, we make quality insurance affordable and
-                  flexible, ensuring coverage that fits your lifestyle and
-                  budget. Whether it’s health, life, motor, or travel insurance,
-                  our plans offer the right protection at the best price.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/1584/1584892.png"
-                  width="60"
-                  alt=""
-                />
-                <h3>Fast & Hassle-Free Claims </h3>
-                <p>
-                  At BlueCross UK, we know that filing an insurance claim can be
-                  stressful. That’s why we’ve made our claims process simple,
-                  fast, and hassle-free, ensuring you get the support you need
-                  without unnecessary delays.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/4230/4230869.png"
-                  width="60"
-                  alt=""
-                />
-                <h3>24/7 UK-Based Customer Support</h3>
-                <p>
-                  At BlueCross UK, we know that insurance questions and
-                  emergencies don’t follow a schedule. That’s why our dedicated
-                  UK-based customer support team is available 24/7, ensuring you
-                  get the help you need whenever you need it.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/10869/10869901.png"
-                  width="60"
-                  alt=""
-                />
-                <h3>Trusted by Thousands</h3>
-                <p>
-                  At BlueCross UK, we take pride in being a trusted name in the
-                  insurance industry, serving thousands of satisfied customers
-                  across the UK. Our commitment to reliability, affordability,
-                  and customer care has made us a preferred choice for
-                  individuals and families seeking comprehensive insurance
-                  solutions.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/2058/2058324.png"
-                  width="60"
-                  alt=""
-                />
-                <h3>Regulated & Reliable</h3>
-                <p>
-                  At BlueCross UK, we operate with complete transparency,
-                  integrity, and compliance, ensuring you receive reliable and
-                  legally protected insurance coverage. As a fully regulated
-                  insurance provider in the United Kingdom, we adhere to the
-                  highest industry standards, giving you peace of mind knowing
-                  you're in safe hands.
-                </p>
-              </div>
+              {chooseus.map((item, index) => (
+                <div>
+                  <img src={item.img} key={index} width="60" />
+                  <h3>{item.title} </h3>
+                  <p>{item.description}</p>
+                </div>
+              ))}
             </div>
           </section>
 
