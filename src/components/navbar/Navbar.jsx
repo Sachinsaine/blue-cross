@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
-// import logo from "../../assets/BlueCross_Logo.webp";
 import axios from "axios";
 
 export const Navbar = () => {

@@ -1,38 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import logo from "../../assets/BlueCross_Logo.webp";
+import axios from "axios";
 
 const ReviewsSection = () => {
-  const reviews = [
-    {
-      name: "Virat Kohli",
-      date: "12th March 2025",
-      text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
-    },
-    {
-      name: "Rohit Sharma",
-      date: "10th March 2025",
-      text: "Exceptional service! The claims process was smooth and efficient. Highly recommend BlueCross.",
-    },
-    {
-      name: "Ben Stokes",
-      date: "8th March 2025",
-      text: "Great experience! Their team guided me through the process seamlessly. Thank you, BlueCross!",
-    },
-    {
-      name: "MS Dhoni",
-      date: "5th March 2025",
-      text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
-    },
-    {
-      name: "Joe Root",
-      date: "3rd March 2025",
-      text: "BlueCross provides excellent coverage and quick claim settlements. Highly recommended.",
-    },
-  ];
+  // const reviews = [
+  //   {
+  //     name: "Virat Kohli",
+  //     date: "12th March 2025",
+  //     text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
+  //   },
+  //   {
+  //     name: "Rohit Sharma",
+  //     date: "10th March 2025",
+  //     text: "Exceptional service! The claims process was smooth and efficient. Highly recommend BlueCross.",
+  //   },
+  //   {
+  //     name: "Ben Stokes",
+  //     date: "8th March 2025",
+  //     text: "Great experience! Their team guided me through the process seamlessly. Thank you, BlueCross!",
+  //   },
+  //   {
+  //     name: "MS Dhoni",
+  //     date: "5th March 2025",
+  //     text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
+  //   },
+  //   {
+  //     name: "Joe Root",
+  //     date: "3rd March 2025",
+  //     text: "BlueCross provides excellent coverage and quick claim settlements. Highly recommended.",
+  //   },
+  // ];
 
   const settings = {
     dots: true,
@@ -59,7 +60,17 @@ const ReviewsSection = () => {
       },
     ],
   };
-
+  const [review, setReview] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:2000/reviews")
+      .then((res) => {
+        setReview(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <section>
       <div className="reviewsContainer">
@@ -72,6 +83,7 @@ const ReviewsSection = () => {
               <FaStar key={i} className="text-warning me-2 fs-3" />
             ))}
             <FaStarHalfAlt className="text-warning fs-3" />
+
             <p className="my-2">
               Based on <u>4,072 reviews</u>{" "}
             </p>
@@ -83,20 +95,23 @@ const ReviewsSection = () => {
             />
           </div>
 
-          {/* Carousel for Reviews */}
           <div className="carousel-container">
             <Slider {...settings}>
-              {reviews.map((review, index) => (
+              {review.map((review, index) => (
                 <div key={index} className="review-box">
                   <div className="pb-2">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} className="text-warning me-2 text-xl" />
                     ))}
                   </div>
-                  <p>"{review.text}"</p>
-                  <div className="reviewer">
-                    <p>{review.name}</p>
-                    <p>{review.date}</p>
+                  <div>
+                    <div>
+                      <p key={index}>{review.review}</p>
+                      <div className="reviewer">
+                        <p>{review.username}</p>
+                        <p>{review.date}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
