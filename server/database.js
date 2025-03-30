@@ -78,30 +78,54 @@
 
 import express, { json, urlencoded } from "express";
 import cors from "cors";
-import { MongoClient as mongoclient } from "mongodb";
+import { MongoClient } from "mongodb";
 import "dotenv/config"; // ✅ Load environment variables
 
+// Connection String
 // eslint-disable-next-line no-undef
-const conString = process.env.MONGO_URI || "mongodb://127.0.0.1:27017"; // ✅ Now it works
+const conString = process.env.MONGO_URI || "mongodb://127.0.0.1:27017";
 
+// Create Express App
 const app = express();
 app.use(cors());
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
+// Global MongoDB Client
+let clientObj;
+async function connectDB() {
+  try {
+    clientObj = new MongoClient(conString, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    await clientObj.connect();
+    console.log("✅ Connected to MongoDB");
+  } catch (error) {
+    console.error("❌ MongoDB Connection Error:", error);
+    // eslint-disable-next-line no-undef
+    process.exit(1); // Exit the process if connection fails
+  }
+}
+
+// Middleware to Ensure DB Connection
+app.use((req, res, next) => {
+  if (!clientObj) {
+    return res.status(500).json({ message: "Database not initialized" });
+  }
+  next();
+});
+
+// Helper Function to Get Database
+const getDatabase = () => clientObj.db("blue-cross");
+
+// Routes
 app.get("/assets", async (req, res) => {
   try {
-    const clientObj = await mongoclient.connect(conString);
-    const database = clientObj.db("blue-cross");
-    const doc = await database
+    const doc = await getDatabase()
       .collection("tbl-assets")
       .findOne({ type: "logo" });
-
-    if (doc) {
-      res.json(doc);
-    } else {
-      res.status(404).json({ message: "Logo not found" });
-    }
+    res.json(doc || { message: "Logo not found" });
   } catch (error) {
     console.error("Database error:", error);
     res.status(500).json({ message: "Internal Server Error" });
@@ -110,9 +134,10 @@ app.get("/assets", async (req, res) => {
 
 app.get("/carousel", async (req, res) => {
   try {
-    const clientObj = await mongoclient.connect(conString);
-    const database = clientObj.db("blue-cross");
-    const docs = await database.collection("tbl-carousel").find({}).toArray();
+    const docs = await getDatabase()
+      .collection("tbl-carousel")
+      .find({})
+      .toArray();
     res.json(docs);
   } catch (error) {
     console.error("Error fetching carousel data:", error);
@@ -122,9 +147,10 @@ app.get("/carousel", async (req, res) => {
 
 app.get("/ychooseus", async (req, res) => {
   try {
-    const clientObj = await mongoclient.connect(conString);
-    const database = clientObj.db("blue-cross");
-    const docs = await database.collection("tbl-ychooseus").find({}).toArray();
+    const docs = await getDatabase()
+      .collection("tbl-ychooseus")
+      .find({})
+      .toArray();
     res.json(docs);
   } catch (error) {
     console.error("Error fetching why choose us data:", error);
@@ -134,9 +160,10 @@ app.get("/ychooseus", async (req, res) => {
 
 app.get("/reviews", async (req, res) => {
   try {
-    const clientObj = await mongoclient.connect(conString);
-    const database = clientObj.db("blue-cross");
-    const docs = await database.collection("tbl-reviews").find({}).toArray();
+    const docs = await getDatabase()
+      .collection("tbl-reviews")
+      .find({})
+      .toArray();
     res.json(docs);
   } catch (error) {
     console.error("Error fetching reviews data:", error);
@@ -144,4 +171,22 @@ app.get("/reviews", async (req, res) => {
   }
 });
 
-app.listen(2000, () => console.log(`Server started at: http://127.0.0.1:2000`));
+app.get("/aboutInsurances", async (req, res) => {
+  try {
+    const docs = await getDatabase()
+      .collection("tbl-aboutinsurances")
+      .find({})
+      .toArray();
+    res.json(docs);
+  } catch (error) {
+    console.error("Error fetching about insurances data:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+// Start Server After Connecting to MongoDB
+connectDB().then(() => {
+  app.listen(2000, () =>
+    console.log(`🚀 Server started at: http://127.0.0.1:2000`)
+  );
+});

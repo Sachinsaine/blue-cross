@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,10 +12,16 @@ const countrys = [
   { country: "Australia" },
   { country: "Germany" },
 ];
-
+const dialingCodes = {
+  "United States of America": "+1",
+  "United Kingdom": "+44",
+  India: "+91",
+  Australia: "+61",
+  Germany: "+49",
+};
 export const Contact = () => {
   const form = useRef();
-
+  const [dialingCode, setDialingCode] = useState("");
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -104,10 +110,13 @@ export const Contact = () => {
                         as="select"
                         name="countryName"
                         className="form-control"
+                        onChange={(e) => {
+                          setDialingCode(dialingCodes[e.target.value] || "");
+                        }}
                       >
-                        <option value="Select Country">Select Country</option>
-                        {countrys.map(({ data, country }) => (
-                          <option key={data} value={data}>
+                        <option value="">Select Country</option>
+                        {countrys.map(({ country }) => (
+                          <option key={country} value={country}>
                             {country}
                           </option>
                         ))}
@@ -124,11 +133,11 @@ export const Contact = () => {
                       <div className="dial row">
                         <div className="col-4">
                           <Field
-                            placeholder="+00"
-                            id="dailingCode"
                             name="dailingCode"
-                            readOnly
+                            value={dialingCode}
                             className="form-control phone"
+                            placeholder="+45"
+                            readOnly
                           />
                         </div>
                         <div className="col-8 ps-0">
@@ -176,15 +185,23 @@ export const Contact = () => {
                     />
                   </div>
                   <div className="col-md-12 mb-4">
-                    <div id="formCheckbox">
-                      <input
-                        type="checkbox"
+                    <div class="formCheckbox">
+                      <div className="d-flex items-center gap-2">
+                        <Field
+                          type="checkbox"
+                          name="contactByEmail"
+                          className="form-check-input"
+                        />
+                        <label className="form-check-label fw-bold font18">
+                          I agree to be contacted
+                        </label>
+                      </div>
+
+                      <ErrorMessage
                         name="contactByEmail"
-                        className="form-check-input "
+                        component="div"
+                        className="text-danger"
                       />
-                      <label className="form-check-label fw-bold font18">
-                        I agree to be contacted
-                      </label>
                     </div>
                   </div>
                   <div className=" my-2 d-flex justify-content-center align-items-center">

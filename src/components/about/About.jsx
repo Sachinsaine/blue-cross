@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
+import axios from "axios";
 
 export const About = () => {
+  const [insurances, setInsurances] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:2000/aboutInsurances")
+      .then((res) => {
+        setInsurances(res.data);
+      })
+      .catch((err) => {
+        console.log("Error fetching about insurances data:", err);
+      });
+  });
   return (
     <div>
       <div className="aboutCont">
@@ -37,84 +49,16 @@ export const About = () => {
         </section>
 
         <section className="compresive">
-          <div className="threeColumGrid">
-            <div>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU1pgP8kKypy_E9XRa7aU4S8dOuMGXfp5UQg&s"
-                alt=""
-                width="64"
-              />
-              <h4>Affordable Plans</h4>
-              <p>
-                We offer flexible coverage options to suit different budgets,
-                ensuring you get the protection you need at a price you can
-                afford.
-              </p>
-            </div>
-            <div>
-              <img
-                src="https://static.thenounproject.com/png/3777058-200.png"
-                alt=""
-                width="64"
-              />
-              <h4>Reliable Support</h4>
-              <p>
-                Our dedicated customer service team is available 24/7 to assist
-                you with any queries, claims, or concerns.
-              </p>
-            </div>
-            <div>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCVsxcrMptpbUeJWzmB_FLZy0Zeh-l1JRnVA&s"
-                alt=""
-                width="64"
-              />
-              <h4>Comprehensive Coverage </h4>
-              <p>
-                From routine check-ups to specialized treatments, our plans
-                cover a wide range of medical services, so you and your family
-                are always protected.
-              </p>
-            </div>
-          </div>
-
-          <div className="threeColumGrid">
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/8743/8743903.png"
-                alt=""
-                width="65"
-              />
-              <h4>Customer Satisfaction First </h4>
-              <p>
-                We listen to your needs and continuously improve our services to
-                provide a smooth and hassle-free experience.
-              </p>
-            </div>
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/16347/16347261.png"
-                alt=""
-                width="65"
-              />
-              <h4>Fast & Easy Claims </h4>
-              <p>
-                Our efficient claims process ensures you get the support you
-                need without unnecessary delays.
-              </p>
-            </div>
-            <div>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/4230/4230869.png"
-                alt=""
-                width="64"
-              />
-              <h4>24/7 Assistance </h4>
-              <p>
-                Our expert support team is always available to guide you through
-                your insurance journey.
-              </p>
-            </div>
+          <div className="clm6grid">
+            {insurances.map((item, index) => (
+              <div className="">
+                <div>
+                  <img src={item.image} key={index} alt="" />
+                  <h5>{item.title}</h5>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
         <section>

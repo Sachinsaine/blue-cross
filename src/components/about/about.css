@@ -7,7 +7,7 @@
   padding: 64px 80px 40px;
   color: #fff;
 }
-.threeColumGrid div {
+.clm6grid div {
   padding: 20px;
   background: #fff;
   color: #000;
@@ -16,14 +16,25 @@
   flex-direction: column;
   align-items: center;
 }
-.threeColumGrid {
+.clm6grid {
+  display: grid;
+  grid-template-rows: 2fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   padding-bottom: 20px;
+  text-align: center;
+}
+.clm6grid img {
+  width: 54px;
+}
+.clm6grid h5 {
+  margin: 20px 0px 5px;
 }
 .aboutHeading {
   display: flex;
   justify-content: space-between;
   padding: 40px 80px;
-  gap: 64px;
+  gap: 34px;
 }
 .misionPara {
   font-size: 18px;

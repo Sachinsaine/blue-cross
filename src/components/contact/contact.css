@@ -83,8 +83,10 @@ select {
 .bi-envelope-fill {
   font-size: 16px;
 }
-#formCheckbox {
+.formCheckbox {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+}
+.formCheckbox Field {
+  margin-top: 6px;
 }
