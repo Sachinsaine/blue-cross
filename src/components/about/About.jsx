@@ -51,9 +51,9 @@ export const About = () => {
         <section className="compresive">
           <div className="clm6grid">
             {insurances.map((item, index) => (
-              <div className="">
+              <div className="" key={index}>
                 <div>
-                  <img src={item.image} key={index} alt="" />
+                  <img src={item.image} alt="" />
                   <h5>{item.title}</h5>
                   <p>{item.description}</p>
                 </div>

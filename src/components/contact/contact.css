@@ -1,5 +1,6 @@
 .contactContainer {
   padding-top: 78px;
+  font-family: "Poppins", sans-serif;
 }
 .lifePara {
   font-size: 42px;
@@ -43,11 +44,11 @@ select {
   border-radius: 5px;
   cursor: pointer;
 }
-.btnSubmit:hover {
+/* .btnSubmit:hover {
   background: #0a77a5;
   color: #fff;
   border: none;
-}
+} */
 .listenPara {
   color: var(--primary-color);
 }
@@ -89,4 +90,19 @@ select {
 }
 .formCheckbox Field {
   margin-top: 6px;
+}
+.error-input {
+  border: 1.5px solid #ff4444 !important;
+  background-color: #fff6f6 !important;
+}
+
+.error-message {
+  color: #fff;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.form-check-input.error-input {
+  outline: 1px solid #ff4444;
 }

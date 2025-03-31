@@ -41,3 +41,42 @@
   line-height: 1.3;
   font-weight: bold;
 }
+
+@media (max-width: 420px) {
+  .aboutHeading {
+    padding: 30px 10px;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .compresive {
+    padding: 40px 10px;
+  }
+  .clm6grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutHeading img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .aboutHeading {
+    padding: 30px 10px;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .compresive {
+    padding: 40px 10px;
+  }
+  .clm6grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutHeading img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
