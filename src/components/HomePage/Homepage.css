@@ -21,7 +21,7 @@
   position: relative;
 }
 .carousel-inner {
-  padding-top: 78px;
+  padding-top: 68px;
 }
 .carousel-item::before {
   content: "";
@@ -264,6 +264,89 @@ input:focus {
   top: 50%;
 }
 @media (max-width: 420px) {
+  .carousel-inner img {
+    height: 255px;
+  }
+  .carouseCaption h1 {
+    font-size: 18px;
+  }
+  .carouseCaption p {
+    display: none;
+  }
+  .carouseCaption {
+    position: absolute;
+    left: 0%;
+    top: 65%;
+    color: #fff;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    padding: 0px 50px;
+  }
+  .mainData {
+    padding: 0px 10px;
+  }
+  .mainData h1 {
+    margin: 2rem 0rem;
+    font-size: 1.5rem;
+  }
+  .fourColumGrid,
+  .quoteContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .textCenter {
+    margin-bottom: 18px;
+  }
+  .whyChooseUs {
+    padding: 32px 10px;
+  }
+  .chooseUs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chooseUs div {
+    width: 100%;
+  }
+  .faq {
+    margin: 30px 10px;
+  }
+  .newAccordion {
+    display: flex;
+    flex-direction: column;
+  }
+  .quoteCont {
+    padding: 20px 10px;
+  }
+  .quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 10px;
+  }
+  .quoteForm input {
+    width: 100%;
+  }
+  .bttn {
+    width: 50%;
+  }
+  .reviewCont {
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+  }
+  .fixed-box {
+    width: 100%;
+    padding: 0px;
+  }
+  .carousel-container {
+    width: 100%;
+    padding: 10px 20px 40px;
+  }
+}
+@media (max-width: 768px) {
   .carousel-inner img {
     height: 255px;
   }

@@ -12,7 +12,7 @@
 }
 
 nav {
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
   width: 100%;
   background-color: #fff;
   position: fixed;
@@ -52,4 +52,29 @@ nav {
 .nav-link.active {
   color: var(--primary-color);
   font-weight: bold;
+}
+.rightToggle {
+  display: none;
+}
+.offcanvas-body {
+  background-color: var(--secondary-color);
+}
+@media (max-width: 420px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  .windowLinks {
+    display: none;
+  }
+  .rightToggle {
+    display: block;
+  }
+  .offcanvas-body .navList {
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+  }
+  .offcanvas {
+    width: 70%;
+  }
 }
