@@ -67,23 +67,23 @@ export const Navbar = () => {
           </div>
           <div className="rightToggle">
             <button
-              class="btn p-0"
+              className="btn p-0"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
             >
-              <i class="bi bi-list fs-1"></i>
+              <i className="bi bi-list fs-1"></i>
             </button>
 
             <div
-              class="offcanvas offcanvas-end"
+              className="offcanvas offcanvas-end"
               tabindex="-1"
               id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel"
             >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">
+              <div className="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasRightLabel">
                   <Link to="/">
                     {logo ? (
                       <img
@@ -98,14 +98,14 @@ export const Navbar = () => {
                 </h5>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="offcanvas-body">
+              <div className="offcanvas-body">
                 <ul className="navList">
-                  <li className="nav-item">
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link
                       to="/"
                       className={`nav-link ${
@@ -115,7 +115,7 @@ export const Navbar = () => {
                       Home
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link
                       to="/about"
                       className={`nav-link ${
@@ -125,7 +125,7 @@ export const Navbar = () => {
                       About
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link
                       to="/contact"
                       className={`nav-link ${

@@ -75,6 +75,25 @@ nav {
     font-weight: 500;
   }
   .offcanvas {
-    width: 70%;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  .windowLinks {
+    display: none;
+  }
+  .rightToggle {
+    display: block;
+  }
+  .offcanvas-body .navList {
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+  }
+  .offcanvas {
+    width: 100%;
   }
 }

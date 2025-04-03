@@ -88,38 +88,37 @@ export const Homepage = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src={img01}
-                className="d-block w-100"
-                height="600"
-                alt="Slide 1"
-              />
-              <div className="carouseCaption">
-                <h1>
-                  Choose the UK's top-rated travel insurance for peace of mind
-                  on your journey.
-                </h1>
-                <p>
-                  Enjoy confidence and peace of mind with Blue Cross when
-                  traveling across the UK or internationally.
-                </p>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <img
                 src={img02}
                 className="d-block w-100"
                 height="600"
                 alt="Slide 2"
               />
               <div className="carouseCaption">
-                <h1>
+                <h1 className="poppins-bold">
                   Join the UK’s leading health benefits provider for trusted
                   care.
                 </h1>
-                <p>
+                <p className="poppins-medium">
                   Choose a plan that suits your healthcare, prescriptions,
                   wellness, dental, vision, and more.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item ">
+              <img
+                src={img01}
+                className="d-block w-100"
+                height="600"
+                alt="Slide 1"
+              />
+              <div className="carouseCaption">
+                <h1 className="poppins-bold">
+                  Choose the UK's top-rated travel insurance for peace of mind
+                  on your journey.
+                </h1>
+                <p className="poppins-medium">
+                  Enjoy confidence and peace of mind with Blue Cross when
+                  traveling across the UK or internationally.
                 </p>
               </div>
             </div>
@@ -132,10 +131,10 @@ export const Homepage = () => {
                 alt="Slide 3"
               />
               <div className="carouseCaption">
-                <h1>
+                <h1 className="poppins-bold">
                   Enjoy customised group benefits trusted by millions in the UK.
                 </h1>
-                <p>
+                <p className="poppins-medium">
                   Address the unique needs of your team, from local businesses
                   to large organisations.
                 </p>
@@ -150,11 +149,11 @@ export const Homepage = () => {
                 alt="Slide 4"
               />
               <div className="carouseCaption">
-                <h1>
+                <h1 className="poppins-bold">
                   Safeguard your loved ones with reliable and comprehensive
                   coverage in the UK.
                 </h1>
-                <p>
+                <p className="poppins-medium">
                   Protect your financial well-being with the UK's most respected
                   life insurance provider.
                 </p>
@@ -191,17 +190,23 @@ export const Homepage = () => {
 
         <main>
           <div className="mainData">
-            <h1>Welcome to BlueCross UK – Protecting Your Future</h1>
+            <h1 className="poppins-bold">
+              Welcome to BlueCross UK – Protecting Your Future
+            </h1>
             <section className="ourServices">
-              <h3 className="textCenter">Our Insurance Services</h3>
+              <h3 className="poppins-semibold text-center">
+                Our Insurance Services
+              </h3>
               <div>
                 <div className="fourColumGrid">
                   <div data-aos="zoom-in-down">
-                    <h4 className="h4Text">Private Health Insurance</h4>
+                    <h4 className="poppins-semibold">
+                      Private Health Insurance
+                    </h4>
                     <div>
                       <video src={insurance01} autoPlay loop muted width="70" />{" "}
                     </div>
-                    <p>
+                    <p className="poppins">
                       Get access to the best private healthcare facilities,
                       quick GP appointments, and specialist treatments without
                       NHS waiting times. Our plans cover:
@@ -224,11 +229,11 @@ export const Homepage = () => {
                     </ul>
                   </div>
                   <div data-aos="zoom-in-down">
-                    <h4 className="h4Text">Life Insurance</h4>
+                    <h4 className="poppins-semibold">Life Insurance</h4>
                     <div>
                       <video src={insurance02} autoPlay loop muted width="70" />{" "}
                     </div>
-                    <p>
+                    <p className="poppins">
                       Protect your loved ones’ future with a customized life
                       insurance plan that ensures financial stability when they
                       need it most. Choose from:
@@ -253,11 +258,11 @@ export const Homepage = () => {
                     </ul>
                   </div>
                   <div data-aos="zoom-in-down">
-                    <h4 className="h4Text">Motor Insurance</h4>
+                    <h4 className="poppins-semibold">Motor Insurance</h4>
                     <div>
                       <video src={insurance03} autoPlay loop muted width="70" />{" "}
                     </div>
-                    <p>
+                    <p className="poppins">
                       Drive with confidence and peace of mind, knowing you’re
                       fully protected with our comprehensive motor insurance
                       plans. We offer:
@@ -280,11 +285,11 @@ export const Homepage = () => {
                     </ul>
                   </div>
                   <div data-aos="zoom-in-down">
-                    <h4 className="h4Text">Travel Insurance</h4>
+                    <h4 className="poppins-semibold">Travel Insurance</h4>
                     <div>
                       <video src={insurance04} autoPlay loop muted width="70" />{" "}
                     </div>
-                    <p>
+                    <p className="poppins">
                       Whether you're traveling for leisure, business, or
                       adventure, our travel insurance provides comprehensive and
                       reliable coverage for:
@@ -314,13 +319,13 @@ export const Homepage = () => {
           </div>
 
           <section className="whyChooseUs">
-            <h2>Why Choose BlueCross UK?</h2>
+            <h2 className="poppins-bold">Why Choose BlueCross UK?</h2>
             <div className="chooseUs">
               {chooseus.map((item, index) => (
                 <div>
                   <img src={item.img} key={index} width="60" />
-                  <h3>{item.title} </h3>
-                  <p>{item.description}</p>
+                  <h3 className="poppins-semibold">{item.title} </h3>
+                  <p className="poppins">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -330,7 +335,9 @@ export const Homepage = () => {
             <ReviewsSection />
           </section>
           <section className="faq">
-            <h2 className="mb-5 text-center">FAQs – Your Questions Answered</h2>
+            <h2 className="mb-4 text-center poppins-bold">
+              FAQs – Your Questions Answered
+            </h2>
 
             <div className="newAccordion">
               <div>
@@ -347,12 +354,14 @@ export const Homepage = () => {
                 ))}
               </div>
               <div>
-                <p>{answers[activeIndex]}</p>
+                <p className="poppins">{answers[activeIndex]}</p>
               </div>
             </div>
           </section>
-          <section className="quoteCont">
-            <h2 className="text-center pb-4">Request a quote</h2>
+          <section className="quoteCont poppins">
+            <h2 className="text-center pb-4 poppins-semibold m-0">
+              Request a quote
+            </h2>
             <div className="quoteContainer">
               <div className="d-flex flex-column align-item-center gap-3">
                 <img src={logo} width="200" alt="" />

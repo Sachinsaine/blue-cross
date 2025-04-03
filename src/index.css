@@ -18,23 +18,30 @@ body {
   min-height: 100vh;
 }
 
+.poppins {
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
 .poppins-medium {
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 .poppins-semibold {
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 .poppins-bold {
   font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 .poppins-black {
   font-weight: 900;
+  font-family: "Poppins", sans-serif;
 }
 
 .open-sans-regular,
 .open-sans-semibold,
 .open-sans-bold {
-  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
 }
 

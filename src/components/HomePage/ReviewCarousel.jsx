@@ -7,34 +7,6 @@ import logo from "../../assets/BlueCross_Logo.webp";
 import axios from "axios";
 
 const ReviewsSection = () => {
-  // const reviews = [
-  //   {
-  //     name: "Virat Kohli",
-  //     date: "12th March 2025",
-  //     text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
-  //   },
-  //   {
-  //     name: "Rohit Sharma",
-  //     date: "10th March 2025",
-  //     text: "Exceptional service! The claims process was smooth and efficient. Highly recommend BlueCross.",
-  //   },
-  //   {
-  //     name: "Ben Stokes",
-  //     date: "8th March 2025",
-  //     text: "Great experience! Their team guided me through the process seamlessly. Thank you, BlueCross!",
-  //   },
-  //   {
-  //     name: "MS Dhoni",
-  //     date: "5th March 2025",
-  //     text: "BlueCross was helpful because our account manager is always available to help with any queries or questions we have.",
-  //   },
-  //   {
-  //     name: "Joe Root",
-  //     date: "3rd March 2025",
-  //     text: "BlueCross provides excellent coverage and quick claim settlements. Highly recommended.",
-  //   },
-  // ];
-
   const settings = {
     dots: true,
     infinite: true,
@@ -74,17 +46,19 @@ const ReviewsSection = () => {
   return (
     <section>
       <div className="reviewsContainer">
-        <h2 className="mb-3">Find Out What Our Clients Say About Us</h2>
+        <h2 className="mb-3 poppins-bold">
+          Find Out What Our Clients Say About Us
+        </h2>
         <div className="reviewCont">
           {/* Fixed "Excellent" Box */}
           <div className="fixed-box">
-            <h3>Excellent</h3>
+            <h3 className="poppins-semibold">Excellent</h3>
             {[...Array(4)].map((_, i) => (
               <FaStar key={i} className="text-warning me-2 fs-3" />
             ))}
             <FaStarHalfAlt className="text-warning fs-3" />
 
-            <p className="my-2">
+            <p className="my-2 poppins">
               Based on <u>4,072 reviews</u>{" "}
             </p>
             <img
@@ -105,7 +79,7 @@ const ReviewsSection = () => {
                     ))}
                   </div>
                   <div>
-                    <div>
+                    <div className="poppins">
                       <p key={index}>{review.review}</p>
                       <div className="reviewer">
                         <p>{review.username}</p>
