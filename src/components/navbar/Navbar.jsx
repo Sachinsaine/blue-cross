@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
+import "../../../src/App.css";
 import axios from "axios";
 
 export const Navbar = () => {
@@ -55,6 +56,16 @@ export const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
+                  to="/claim"
+                  className={`nav-link ${
+                    location.pathname === "/claim" ? "active" : ""
+                  }`}
+                >
+                  Claim
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
                   to="/contact"
                   className={`nav-link ${
                     location.pathname === "/contact" ? "active" : ""
@@ -62,6 +73,9 @@ export const Navbar = () => {
                 >
                   Contact
                 </Link>
+              </li>
+              <li>
+                <button className="bttn px-3">Get a Quote</button>
               </li>
             </ul>
           </div>
