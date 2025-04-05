@@ -59,40 +59,46 @@ export const Claims = () => {
 
               {/* Icons positioned around the circle */}
               <div className="icon" style={{ top: "5%", left: "45%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/709/709722.png"
                   alt="Handshake"
-                />
+                /> */}{" "}
+                <i className="bi bi-person-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "90%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/1828/1828727.png"
                   alt="Wallet"
-                />
+                /> */}
+                <i class="bi bi-clock-history"></i>
               </div>
               <div className="icon" style={{ bottom: "-4%", left: "45%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
                   alt="Car"
-                />
+                /> */}
+                <i class="bi bi-check-circle-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "-2%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/684/684809.png"
                   alt="Location"
-                />
+                /> */}
+                <i class="bi bi-geo-alt-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "74%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png"
                   alt="Insurance"
-                />
+                /> */}
+                <i class="bi bi-clipboard-check-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "14%" }}>
-                <img
+                {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
                   alt="Support"
-                />
+                /> */}
+                <i class="bi bi-people-fill"></i>
               </div>
             </div>
           </div>
