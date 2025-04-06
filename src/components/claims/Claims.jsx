@@ -5,13 +5,7 @@ export const Claims = () => {
   return (
     <div>
       <div className="claims-container">
-        <h1>Delivering Claim Promises</h1>
         <div className="position-relative">
-          <p>
-            At <strong>BlueCross</strong>, we make the claims process simple and
-            hassle-free. Follow the steps below to file your claim and receive
-            your benefits quickly.
-          </p>
           <div className="twoColumGrid text-start">
             <div>
               <h1>Your Protection, Our Priority</h1>
@@ -28,20 +22,15 @@ export const Claims = () => {
                 <div>
                   <h3>Our Approach</h3>
                   <p>
-                    Our dedicated team of professionals is trained to provide
-                    personalized support, guiding you through every step of the
-                    claims process with empathy and expertise. We prioritize
-                    your peace of mind, ensuring a smooth and transparent
-                    experience.
+                    We guide you through the claims process with empathy and
+                    expertise, ensuring a smooth and transparent experience.
                   </p>
                 </div>
                 <div>
                   <h3>Our Claim Process</h3>
                   <p>
-                    We believe in keeping things straightforward. Our claims
-                    process requires only essential details, and we provide
-                    timely updates on your claim status, so you're always
-                    informed. Let me know if you want any further refinements!
+                    We keep our claims process simple just the essentials, with
+                    timely updates to keep you informed every step of the way.
                   </p>
                 </div>
               </div>
@@ -58,7 +47,7 @@ export const Claims = () => {
               </div>
 
               {/* Icons positioned around the circle */}
-              <div className="icon" style={{ top: "5%", left: "45%" }}>
+              <div className="icon" style={{ top: "5%", left: "43%" }}>
                 {/* <img
                   src="https://cdn-icons-png.flaticon.com/512/709/709722.png"
                   alt="Handshake"
