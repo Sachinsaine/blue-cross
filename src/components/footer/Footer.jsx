@@ -1,6 +1,10 @@
 import React from "react";
 import "./footer.css";
 import logo from "../../assets/BlueCross_Logo.webp";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -27,13 +31,16 @@ export const Footer = () => {
                   <div className="footer-social-icon">
                     <span>Follow us</span>
                     <a href="#">
-                      <i className="bi bi-facebook"></i>
+                      <FaFacebookSquare />
                     </a>
                     <a href="#">
-                      <i className="fab fa-twitter twitter-bg"></i>
+                      <FaSquareXTwitter />
                     </a>
                     <a href="#">
-                      <i className="fab fa-google-plus-g google-bg"></i>
+                      <FaInstagramSquare />
+                    </a>
+                    <a href="#">
+                      <FaLinkedin />
                     </a>
                   </div>
                 </div>

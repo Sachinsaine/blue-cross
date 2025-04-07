@@ -56,16 +56,15 @@ ul {
   line-height: 28px;
 }
 .footer-social-icon span {
-  color: #fff;
+  color: #7e7e7e;
   display: block;
   font-size: 20px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
 }
 .footer-social-icon a {
-  color: #fff;
-  font-size: 16px;
+  /* color: #fff; */
+  font-size: 24px;
   margin-right: 15px;
 }
 .footer-social-icon i {
@@ -75,15 +74,10 @@ ul {
   line-height: 38px;
   border-radius: 50%;
 }
-.facebook-bg {
-  background: #3b5998;
+.footer-social-icon a {
+  color: var(--primary-color);
 }
-.twitter-bg {
-  background: #55acee;
-}
-.google-bg {
-  background: #dd4b39;
-}
+
 .footer-widget-heading h3 {
   font-size: 20px;
   font-weight: 600;
@@ -163,4 +157,28 @@ ul {
 }
 .footer-widget-heading {
   margin-left: 2rem;
+}
+@media (max-width: 420px) {
+  .footer-widget-heading {
+    margin: 0px;
+  }
+  .footer-widget-heading h3 {
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  .footer-widget ul {
+    padding: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-widget-heading {
+    margin: 0px;
+  }
+  .footer-widget-heading h3 {
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  .footer-widget ul {
+    padding: 0px;
+  }
 }
