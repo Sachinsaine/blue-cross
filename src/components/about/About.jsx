@@ -19,7 +19,11 @@ export const About = () => {
       <div className="aboutCont">
         <section>
           <div className="aboutHeading">
-            <div>
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <h2 className="textColor">OUR MISSION</h2>
               <p className="misionPara">
                 At BlueCross, we are committed to simplifying lives by providing
@@ -27,7 +31,11 @@ export const About = () => {
                 saving our customers time, effort, and money.
               </p>
             </div>
-            <div>
+            <div
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <p>
                 At BlueCross, we empower you to make informed decisions with
                 confidence when selecting essential insurance solutions. With
@@ -51,7 +59,7 @@ export const About = () => {
         <section className="compresive">
           <div className="clm6grid">
             {insurances.map((item, index) => (
-              <div className="" key={index}>
+              <div className="" key={index} data-aos="zoom-in">
                 <div>
                   <img src={item.image} alt="" />
                   <h5>{item.title}</h5>
@@ -63,14 +71,22 @@ export const About = () => {
         </section>
         <section>
           <div className="aboutHeading">
-            <div>
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <img
                 src="https://www.iselect.com.au/wp-content/uploads/2024/02/056A9905-Enhanced-NR-Edit-768x512.jpg"
                 alt=""
                 width="400"
               />
             </div>
-            <div>
+            <div
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <h2 className="textColor">WHO WE ARE</h2>
               <p className="misionPara">
                 At BlueCross, we take pride in being a trusted leader in the UK

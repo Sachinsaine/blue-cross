@@ -340,7 +340,11 @@ export const Homepage = () => {
             </h2>
 
             <div className="newAccordion">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 {questions.map((question, index) => (
                   <h6
                     key={index}
@@ -353,7 +357,11 @@ export const Homepage = () => {
                   </h6>
                 ))}
               </div>
-              <div>
+              <div
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <p className="poppins">{answers[activeIndex]}</p>
               </div>
             </div>

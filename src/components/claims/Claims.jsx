@@ -7,7 +7,11 @@ export const Claims = () => {
       <div className="claims-container">
         <div className="position-relative">
           <div className="twoColumGrid text-start">
-            <div>
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <h1>Your Protection, Our Priority</h1>
               <p>
                 At BlueCross, we are committed to standing by you and your
@@ -36,7 +40,12 @@ export const Claims = () => {
               </div>
             </div>
 
-            <div className="cont">
+            <div
+              className="cont"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <div className="circleOuter"></div>
               <div className="circle"></div>
               <div className="center-image">
@@ -93,6 +102,62 @@ export const Claims = () => {
           </div>
         </div>
       </div>
+      <section className="insuSteps">
+        <div>
+          <div
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
+            <h1>How to file your claim?</h1>
+            <h3>Quick and Easy 3-Step Claim Process</h3>
+          </div>
+          <div
+            className="threeColumGrid gap-5 pt-4"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <div>
+              <div className="claimType">
+                <span className="step">1</span>
+                <span className="claimIcon">
+                  <i class="bi bi-clipboard2-check"></i>
+                </span>
+              </div>
+              <h4>Claim Reporting</h4>
+              <p>
+                Notify us About your claim through our online portal, phone, or
+                in person.
+              </p>
+            </div>
+            <div>
+              <div className="claimType">
+                <span className="step">2</span>
+                <span className="claimIcon">
+                  <i class="bi bi-file-text"></i>
+                </span>
+              </div>
+              <h4>Document Submission</h4>
+              <p>
+                Submit the neccessary documents for varification quick and
+                hassle free.
+              </p>
+            </div>
+            <div>
+              <div className="claimType">
+                <span className="step">3</span>
+                <span className="claimIcon">
+                  <i class="bi bi-check2-square"></i>
+                </span>
+              </div>
+              <h4>Claim Settlement</h4>
+              <p>
+                Once verified your claim will be processed and settled promptly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
