@@ -158,6 +158,24 @@ export const Claims = () => {
           </div>
         </div>
       </section>
+      <section>
+        <h3>Looking for</h3>
+        <h4>Choose your Claim Kind</h4>
+        <div className="gridColmn5">
+          <span>
+            <i class="bi bi-car-front-fill"></i>
+          </span>
+          <span>
+            <i class="bi bi-heart-pulse"></i>
+          </span>
+          <span>
+            <i class="bi bi-globe-americas"></i>
+          </span>
+          <span>
+            <i class="bi bi-car-front-fill"></i>
+          </span>
+        </div>
+      </section>
     </div>
   );
 };
