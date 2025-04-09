@@ -41,7 +41,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 5px solid #003366;
+  border: 5px solid var(--primary-color);
 }
 
 .center-image img {
@@ -120,6 +120,7 @@
   border-radius: 50%;
   padding: 8px 15px;
   font-size: 35px;
+  background-color: #fff;
 }
 .threeColumGrid h4 {
   font-size: 18px;
@@ -164,7 +165,32 @@
 .Motor ul {
   padding: 0px 18px;
 }
-
+.insTypeCont {
+  position: relative;
+}
+.insTypeCont .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dashed var(--primary-color);
+}
+.insTypeCont .center-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--primary-color);
+}
+.Travel .threeColumGrid {
+  grid-template-columns: 60% 40%;
+}
 @media (max-width: 420px) {
   .claims-container {
     padding: 100px 10px 30px;

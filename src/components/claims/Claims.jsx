@@ -59,53 +59,25 @@ export const Claims = () => {
               <div className="circleOuter"></div>
               <div className="circle"></div>
               <div className="center-image">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBi_XwU4YTaz2mBzM9u8AJqpS6dOh-fqEDcgcKEET5Z7cPb2PED-YbSv4e_8f5YO8-eso&usqp=CAU"
-                  alt="Handshake"
-                />
+                <img src="/src/assets/handshake.jpeg" alt="Handshake" />
               </div>
 
-              {/* Icons positioned around the circle */}
               <div className="icon" style={{ top: "5%", left: "43%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/709/709722.png"
-                  alt="Handshake"
-                /> */}{" "}
                 <i className="bi bi-person-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "90%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/1828/1828727.png"
-                  alt="Wallet"
-                /> */}
                 <i class="bi bi-clock-history"></i>
               </div>
               <div className="icon" style={{ bottom: "-4%", left: "45%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
-                  alt="Car"
-                /> */}
                 <i class="bi bi-check-circle-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "-2%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/684/684809.png"
-                  alt="Location"
-                /> */}
                 <i class="bi bi-geo-alt-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "74%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png"
-                  alt="Insurance"
-                /> */}
                 <i class="bi bi-clipboard-check-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "14%" }}>
-                {/* <img
-                  src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
-                  alt="Support"
-                /> */}
                 <i class="bi bi-people-fill"></i>
               </div>
             </div>
@@ -123,7 +95,7 @@ export const Claims = () => {
             <h3>Quick and Easy 3-Step Claim Process</h3>
           </div>
           <div
-            className="threeColumGrid gap-5 pt-4"
+            className="threeColumGrid gap-5 pt-5"
             data-aos="fade-up"
             data-aos-duration="3000"
           >
@@ -189,7 +161,11 @@ export const Claims = () => {
         {selectedType === "Health" && (
           <div className="Health">
             <div className="twoColumGrid">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <h3 className="textColor fw-bold">What is a Health Claim?</h3>
                 <p>
                   A Health Insurance Claim is a formal request made by the
@@ -219,12 +195,20 @@ export const Claims = () => {
                   need it the most.
                 </p>
               </div>
-              <div>
-                <img
-                  src="/src/assets/claimSteps.png"
-                  alt=""
-                  className="w-100"
-                />
+              <div
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="insTypeCont"
+              >
+                <div className="circle"></div>
+                <div className="center-image">
+                  <img
+                    src="/src/assets/healthInsImg.avif"
+                    alt=""
+                    className="w-100"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -232,7 +216,11 @@ export const Claims = () => {
         {selectedType === "Life" && (
           <div className="Life">
             <div className="twoColumGrid">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <h3 className="textColor fw-bold">What is a Life Claim?</h3>
                 <p>
                   A <strong>Life Insurance Claim</strong> is a request made by
@@ -257,12 +245,21 @@ export const Claims = () => {
                 </p>
                 <p>Let BlueCross stand by your family, just like you would.</p>
               </div>
-              <div>
-                <img
-                  src="/src/assets/claimSteps.png"
-                  alt=""
-                  className="w-100"
-                />
+
+              <div
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="insTypeCont"
+              >
+                <div className="circle"></div>
+                <div className="center-image">
+                  <img
+                    src="/src/assets/lifeInsImg.avif"
+                    alt=""
+                    className="w-100"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -270,7 +267,11 @@ export const Claims = () => {
         {selectedType === "Motor" && (
           <div className="Motor">
             <div className="twoColumGrid">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <h3 className="textColor fw-bold">What is a Motor Claim?</h3>
                 <p>
                   A <b>Motor Insurance Claim</b>is a request made by the
@@ -299,12 +300,17 @@ export const Claims = () => {
                   stress-free.
                 </p>
               </div>
-              <div>
-                <img
-                  src="/src/assets/claimSteps.png"
-                  alt=""
-                  className="w-100"
-                />
+
+              <div
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="insTypeCont"
+              >
+                <div className="circle"></div>
+                <div className="center-image">
+                  <img src="/src/assets/carr.jpeg" alt="" className="w-100" />
+                </div>
               </div>
             </div>
           </div>
@@ -312,7 +318,11 @@ export const Claims = () => {
         {selectedType === "Travel" && (
           <div className="Travel">
             <div className="twoColumGrid">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <h3 className="textColor fw-bold">What is a Travel Claim?</h3>
                 <p>
                   A <strong>Travel Insurance Claim</strong> is a formal request
@@ -355,12 +365,21 @@ export const Claims = () => {
                   wherever you go.
                 </p>
               </div>
-              <div>
-                <img
-                  src="/src/assets/claimSteps.png"
-                  alt=""
-                  className="w-100"
-                />
+
+              <div
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="insTypeCont"
+              >
+                <div className="circle"></div>
+                <div className="center-image">
+                  <img
+                    src="/src/assets/travelInsImg.jpeg"
+                    alt=""
+                    className="w-100"
+                  />
+                </div>
               </div>
             </div>
           </div>
