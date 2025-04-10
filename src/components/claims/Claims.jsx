@@ -209,6 +209,15 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
+                <div className="icon" style={{ top: "2%", left: "48%" }}></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "30%", left: "69%" }}
+                ></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "30%", left: "29%" }}
+                ></div>
               </div>
             </div>
           </div>
@@ -260,6 +269,15 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
+                <div className="icon" style={{ top: "2%", left: "48%" }}></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "30%", left: "69%" }}
+                ></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "30%", left: "29%" }}
+                ></div>
               </div>
             </div>
           </div>
@@ -311,6 +329,15 @@ export const Claims = () => {
                 <div className="center-image">
                   <img src="/src/assets/carr.jpeg" alt="" className="w-100" />
                 </div>
+                <div className="icon" style={{ top: "4%", left: "48%" }}></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "35%", left: "71%" }}
+                ></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "35%", left: "28%" }}
+                ></div>
               </div>
             </div>
           </div>
@@ -355,7 +382,7 @@ export const Claims = () => {
                 </ul>
                 <p>
                   We’ve made the claim process smooth and digital — so you can
-                  <strong>
+                  <strong className="ps-2">
                     submit your Travel Insurance Claim online,
                   </strong>{" "}
                   from anywhere in the world.
@@ -380,6 +407,15 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
+                <div className="icon" style={{ top: "8%", left: "48%" }}></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "35%", left: "70%" }}
+                ></div>
+                <div
+                  className="icon"
+                  style={{ bottom: "35%", left: "29%" }}
+                ></div>
               </div>
             </div>
           </div>
