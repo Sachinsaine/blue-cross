@@ -141,8 +141,8 @@ export const Claims = () => {
         </div>
       </section>
       <section className="typesOfInsurance">
-        <h3>Looking for</h3>
-        <h4>Choose your Claim Kind</h4>
+        <h3 className="textColor fw-bold m-0 fs-6">Looking for</h3>
+        <h4 className="textColor fw-bold">Choose your Claim Kind</h4>
         <div className="gridColmn5">
           {claimTypes.map((type) => (
             <div
@@ -209,14 +209,14 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
-                <div className="icon" style={{ top: "2%", left: "48%" }}></div>
+                <div className="icon" style={{ top: "-6%", left: "48%" }}></div>
                 <div
                   className="icon"
-                  style={{ bottom: "30%", left: "69%" }}
+                  style={{ bottom: "30%", left: "76%" }}
                 ></div>
                 <div
                   className="icon"
-                  style={{ bottom: "30%", left: "29%" }}
+                  style={{ bottom: "30%", left: "22%" }}
                 ></div>
               </div>
             </div>
@@ -269,14 +269,14 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
-                <div className="icon" style={{ top: "2%", left: "48%" }}></div>
+                <div className="icon" style={{ top: "-5%", left: "48%" }}></div>
                 <div
                   className="icon"
-                  style={{ bottom: "30%", left: "69%" }}
+                  style={{ bottom: "30%", left: "75%" }}
                 ></div>
                 <div
                   className="icon"
-                  style={{ bottom: "30%", left: "29%" }}
+                  style={{ bottom: "30%", left: "23%" }}
                 ></div>
               </div>
             </div>
@@ -329,14 +329,14 @@ export const Claims = () => {
                 <div className="center-image">
                   <img src="/src/assets/carr.jpeg" alt="" className="w-100" />
                 </div>
-                <div className="icon" style={{ top: "4%", left: "48%" }}></div>
+                <div className="icon" style={{ top: "-1%", left: "48%" }}></div>
                 <div
                   className="icon"
-                  style={{ bottom: "35%", left: "71%" }}
+                  style={{ bottom: "35%", left: "76%" }}
                 ></div>
                 <div
                   className="icon"
-                  style={{ bottom: "35%", left: "28%" }}
+                  style={{ bottom: "35%", left: "22%" }}
                 ></div>
               </div>
             </div>
@@ -407,14 +407,14 @@ export const Claims = () => {
                     className="w-100"
                   />
                 </div>
-                <div className="icon" style={{ top: "8%", left: "48%" }}></div>
+                <div className="icon" style={{ top: "6%", left: "48%" }}></div>
                 <div
                   className="icon"
-                  style={{ bottom: "35%", left: "70%" }}
+                  style={{ bottom: "35%", left: "75%" }}
                 ></div>
                 <div
                   className="icon"
-                  style={{ bottom: "35%", left: "29%" }}
+                  style={{ bottom: "35%", left: "23%" }}
                 ></div>
               </div>
             </div>

@@ -2,19 +2,21 @@
   position: absolute;
   left: 10%;
   text-align: start;
-  top: 30%;
+  top: 25%;
   color: #fff;
   width: 40%;
   z-index: 2;
 }
 .carouseCaption h1 {
-  font-size: 42px;
+  font-size: 52px;
   margin: 0px;
   line-height: 1;
   padding-bottom: 1rem;
 }
 .carouseCaption p {
   margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .carousel-item {
   position: relative;
@@ -111,7 +113,7 @@ main h1 {
   margin: 0px 0px 20px;
   width: 30%;
   cursor: pointer;
-  min-height: 384px;
+  min-height: 310px;
 }
 .chooseUs h3 {
   font-size: 20px;

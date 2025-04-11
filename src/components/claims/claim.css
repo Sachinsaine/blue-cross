@@ -212,9 +212,19 @@
   transform: translate(-50%, -50%);
   border: 5px solid var(--primary-color);
 }
-.Travel .threeColumGrid {
+.Travel .twoColumGrid {
   grid-template-columns: 60% 40%;
 }
+.Motor .twoColumGrid {
+  grid-template-columns: 60% 40%;
+}
+.Health .twoColumGrid {
+  grid-template-columns: 60% 40%;
+}
+.Life .twoColumGrid {
+  grid-template-columns: 60% 40%;
+}
+
 @media (max-width: 420px) {
   .claims-container {
     padding: 100px 10px 30px;
