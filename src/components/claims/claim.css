@@ -165,6 +165,7 @@
 }
 .typesOfInsurance {
   padding: 60px 80px 30px;
+  font-family: "Poppins", sans-serif;
 }
 .insuTypeCont {
   display: flex;
@@ -267,6 +268,9 @@
   .Travel .circle {
     top: 135px;
   }
+  .icon {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .claims-container {
@@ -309,5 +313,8 @@
   }
   .Travel .circle {
     top: 135px;
+  }
+  .icon {
+    display: none;
   }
 }

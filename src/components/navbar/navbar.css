@@ -59,6 +59,38 @@ nav {
 .offcanvas-body {
   background-color: var(--secondary-color);
 }
+.offcanvas {
+  width: 60%;
+}
+.quoteCont {
+  background-color: var(--secondary-color);
+  padding: 40px 80px;
+}
+.quoteContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 35% 62%;
+  width: 100%;
+  gap: 30px;
+}
+.quoteForm {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+input {
+  border: 1px solid var(--primary-color);
+  padding: 0px 10px;
+  border-radius: 4px;
+}
+input:focus {
+  outline: none;
+}
+
 @media (max-width: 420px) {
   nav {
     padding: 1.5rem 1rem;
