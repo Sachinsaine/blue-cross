@@ -362,7 +362,7 @@ input:focus {
   .carouseCaption {
     position: absolute;
     left: 0%;
-    top: 68%;
+    top: 65%;
     color: #fff;
     width: 100%;
     z-index: 2;

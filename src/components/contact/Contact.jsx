@@ -272,7 +272,7 @@ export const Contact = () => {
                 <div className="query">
                   <div className="imageQuery">
                     <img
-                      src="/src/assets/undraw_mail_fzk2__1_-removebg-preview.png"
+                      src="/src/assets/queryImg.svg"
                       width="263"
                       height="246"
                       alt="Mail illustration"
@@ -284,9 +284,15 @@ export const Contact = () => {
                       If you have got an opinion, we want to hear from you. In
                       addition, the reach out and give us a call should reflect.
                       Give us a call or email us at
-                      <strong className="ps-2">
+                      <a
+                        href="mailto:support@bluecross.com"
+                        className="text-white text-decoration-none ms-2 fw-bold"
+                      >
                         support@bluecross.com
-                      </strong>{" "}
+                      </a>
+                      {/* <strong className="ps-2">
+                        support@bluecross.com
+                      </strong>{" "} */}
                       <br /> and we will respond to you in 24 to 48 hours.
                     </p>
                   </div>

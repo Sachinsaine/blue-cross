@@ -225,6 +225,14 @@
 .Life .twoColumGrid {
   grid-template-columns: 60% 40%;
 }
+.icon:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+.icon i:hover {
+  color: #fff;
+}
 
 @media (max-width: 420px) {
   .claims-container {

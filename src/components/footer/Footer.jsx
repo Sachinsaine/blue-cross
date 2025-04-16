@@ -5,6 +5,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -52,25 +53,21 @@ export const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a href="#">about</a>
+                      <Link to="/contact">Contact</Link>
                     </li>
                     <li>
-                      <a href="#">services</a>
-                    </li>
-
-                    <li>
-                      <a href="#">Contact</a>
+                      <Link to="/about">About</Link>
                     </li>
 
                     <li>
-                      <a href="#">Our Services</a>
+                      <a href="#">Get a Qoute</a>
                     </li>
 
                     <li>
-                      <a href="#">Contact us</a>
+                      <Link to="/claim">Claim</Link>
                     </li>
                   </ul>
                 </div>

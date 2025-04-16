@@ -10,7 +10,6 @@ import insurance02 from "../../assets/insurances/medicine.mp4";
 import insurance03 from "../../assets/insurances/car-insurance.mp4";
 import insurance04 from "../../assets/insurances/airplane.mp4";
 import checkIcon from "../../assets/insurances/checkmark.png";
-import logo from "../../assets/BlueCross_Logo.webp";
 import { Field, Form, Formik } from "formik";
 import ReviewsSection from "./ReviewCarousel";
 import axios from "axios";
@@ -363,37 +362,6 @@ export const Homepage = () => {
                 data-aos-easing="ease-in-sine"
               >
                 <p className="poppins">{answers[activeIndex]}</p>
-              </div>
-            </div>
-          </section>
-          <section className="quoteCont poppins">
-            <h2 className="text-center pb-4 poppins-semibold m-0">
-              Request a quote
-            </h2>
-            <div className="quoteContainer">
-              <div className="d-flex flex-column align-item-center gap-3">
-                <img src={logo} width="200" alt="" />
-                <p>
-                  Join thousands of satisfied customers who trust BlueCross UK
-                  for their insurance needs. Get a free, no-obligation quote
-                  today and enjoy peace of mind with the right coverage.
-                </p>
-              </div>
-              <div>
-                <Formik>
-                  <Form>
-                    <div className="quoteForm">
-                      <Field type="text" placeholder="Full Name" />
-                      <Field type="email" placeholder="Email Address" />
-                      <Field type="number" placeholder="Mobile Number" />
-                    </div>
-                    <div className="quoteForm">
-                      <Field type="text" placeholder="State" />
-                      <Field type="text" placeholder="Zipcode" />
-                      <button className="bttn">Submit</button>
-                    </div>
-                  </Form>
-                </Formik>
               </div>
             </div>
           </section>

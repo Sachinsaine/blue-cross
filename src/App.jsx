@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import { Footer } from "./components/footer/Footer";
 import { About } from "./components/about/About";
 import { Claims } from "./components/claims/Claims";
-import Qoute from "./components/quote/getQoute";
 
 function App() {
   useEffect(() => {
@@ -27,7 +26,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/claim" element={<Claims />} />
-        {/* <Route path="/quote" element={<Qoute />} /> */}
       </Routes>
       <Footer />
     </Router>

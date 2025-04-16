@@ -4,8 +4,57 @@ import "./navbar.css";
 import "../../../src/App.css";
 import axios from "axios";
 import { Field, Form, Formik } from "formik";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import logo from "../../assets/BlueCross_Logo.webp";
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <img src={logo} alt="logo" width="200" />
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="p-0">
+        <section className="quoteCont poppins">
+          <h2 className="text-center pb-4 poppins-semibold m-0">
+            Request a quote
+          </h2>
+          <div className="">
+            <div>
+              <Formik>
+                <Form>
+                  <div className="quoteForm">
+                    <Field type="text" placeholder="Full Name" />
+                    <Field type="email" placeholder="Email Address" />
+                    <Field type="number" placeholder="Mobile Number" />
+                    <Field type="text" placeholder="State" />
+                    <Field type="text" placeholder="Zipcode" />
+                  </div>
+                  <div className="d-flex justify-content-center align-items-center">
+                    <button className="bttn">Submit</button>
+                  </div>
+                </Form>
+              </Formik>
+            </div>
+          </div>
+        </section>
+      </Modal.Body>
+      {/* <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer> */}
+    </Modal>
+  );
+}
 
 export const Navbar = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   const location = useLocation();
   const [logo, setLogo] = useState(null);
   useEffect(() => {
@@ -76,52 +125,17 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li>
-                {/* <button className="bttn px-3">Get a Quote</button> */}
                 <button
-                  type="button"
                   className="bttn px-3"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  onClick={() => setModalShow(true)}
                 >
                   Get a Quote
                 </button>
 
-                <div
-                  className="modal fade"
-                  id="exampleModal"
-                  tabindex="-1"
-                  aria-labelledby="exampleModalLabel"
-                  aria-hidden="true"
-                >
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h1 className="modal-title fs-5" id="exampleModalLabel">
-                          Modal title
-                        </h1>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body">...</div>
-                      <div className="modal-footer">
-                        <button
-                          type="button"
-                          className="btn btn-secondary"
-                          data-bs-dismiss="modal"
-                        >
-                          Close
-                        </button>
-                        <button type="button" className="btn btn-primary">
-                          Save changes
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <MyVerticallyCenteredModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
               </li>
             </ul>
           </div>
@@ -138,7 +152,7 @@ export const Navbar = () => {
 
             <div
               className="offcanvas offcanvas-end"
-              tabindex="-1"
+              tabIndex="-1"
               id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel"
             >
@@ -207,7 +221,7 @@ export const Navbar = () => {
                     <div
                       className="modal fade"
                       id="exampleModal"
-                      tabindex="-1"
+                      tabIndex="-1"
                       aria-labelledby="exampleModalLabel"
                       aria-hidden="true"
                     >

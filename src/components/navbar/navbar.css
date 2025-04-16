@@ -64,15 +64,9 @@ nav {
 }
 .quoteCont {
   background-color: var(--secondary-color);
-  padding: 40px 80px;
+  padding: 30px;
 }
-.quoteContainer {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 35% 62%;
-  width: 100%;
-  gap: 30px;
-}
+
 .quoteForm {
   display: grid;
   grid-template-rows: 1fr;
@@ -90,7 +84,9 @@ input {
 input:focus {
   outline: none;
 }
-
+.quoteCont .bttn {
+  width: 20%;
+}
 @media (max-width: 420px) {
   nav {
     padding: 1.5rem 1rem;
