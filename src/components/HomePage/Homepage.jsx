@@ -13,7 +13,6 @@ import checkIcon from "../../assets/insurances/checkmark.png";
 import { Field, Form, Formik } from "formik";
 import ReviewsSection from "./ReviewCarousel";
 import axios from "axios";
-
 export const Homepage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const questions = [
