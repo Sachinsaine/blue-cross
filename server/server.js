@@ -110,6 +110,28 @@ app.get("/aboutInsurances", async (req, res) => {
   }
 });
 
+app.post("/adduser", (req, res) => {
+  var user = {
+    full_name: req.body.full_name,
+    countryName: req.body.countryName,
+    dialingCode: req.body.dialingCode,
+    mobile_number: req.body.mobile_number,
+    email: req.body.email,
+    message: req.body.message,
+  };
+  mongoClient.connect(conString).then((clientObj) => {
+    var database = clientObj.db("mern-blog");
+    database
+      .collection("tbl-users")
+      .insertOne(user)
+      .then(() => {
+        console.log("user added successfully");
+        res.redirect("/users");
+        res.end();
+      });
+  });
+});
+
 connectDB()
   .then(() => {
     const port = process.env.PORT || 2000;

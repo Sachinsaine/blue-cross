@@ -201,6 +201,16 @@ export const Navbar = () => {
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
                     <Link
+                      to="/claim"
+                      className={`nav-link ${
+                        location.pathname === "/claim" ? "active" : ""
+                      }`}
+                    >
+                      Claim
+                    </Link>
+                  </li>
+                  <li className="nav-item" data-bs-dismiss="offcanvas">
+                    <Link
                       to="/contact"
                       className={`nav-link ${
                         location.pathname === "/contact" ? "active" : ""

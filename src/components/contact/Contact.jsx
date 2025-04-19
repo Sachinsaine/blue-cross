@@ -38,7 +38,7 @@ export const Contact = () => {
       <div>
         <Formik
           initialValues={{
-            from_name: "",
+            full_name: "",
             countryName: "",
             dialingCode: "",
             mobile_number: "",
@@ -47,7 +47,7 @@ export const Contact = () => {
             contactByEmail: false,
           }}
           validationSchema={Yup.object({
-            from_name: Yup.string()
+            full_name: Yup.string()
               .min(3, "Name must be at least 3 characters")
               .required("Name is required"),
             countryName: Yup.string()
@@ -81,18 +81,18 @@ export const Contact = () => {
                     <div className="formInputsCont">
                       <div className="form-group my-2">
                         <Field
-                          name="from_name"
+                          name="full_name"
                           type="text"
                           placeholder="Full name"
                           className={`form-control ${
-                            touched.from_name && errors.from_name
+                            touched.full_name && errors.full_name
                               ? "error-input"
                               : ""
                           }`}
                         />
-                        {touched.from_name && errors.from_name && (
+                        {touched.full_name && errors.full_name && (
                           <div className="error-message">
-                            {errors.from_name}
+                            {errors.full_name}
                           </div>
                         )}
                       </div>
