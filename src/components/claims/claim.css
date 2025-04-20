@@ -190,6 +190,13 @@
 .Motor ul {
   padding: 0px 18px;
 }
+.Travel ul {
+  padding: 0px 18px;
+}
+.Health ul {
+  padding: 0px 18px;
+}
+
 .insTypeCont {
   position: relative;
 }

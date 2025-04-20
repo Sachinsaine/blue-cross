@@ -62,7 +62,7 @@ export const Claims = () => {
                 <img src="/src/assets/handshake.jpeg" alt="Handshake" />
               </div>
 
-              <div className="icon" style={{ top: "5%", left: "43%" }}>
+              <div className="icon" style={{ top: "7%", left: "43%" }}>
                 <i className="bi bi-person-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "90%" }}>
