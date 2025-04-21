@@ -272,7 +272,7 @@ export const Contact = () => {
                 <div className="query">
                   <div className="imageQuery">
                     <img
-                      src="/src/assets/queryImg.svg"
+                      src="https://content.ageasfederal.com/blob/query_c890463b3e.svg"
                       width="263"
                       height="246"
                       alt="Mail illustration"

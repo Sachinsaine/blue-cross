@@ -253,7 +253,7 @@ export const Navbar = () => {
                           </div>
                           <div className="modal-body">
                             <section className="quoteCont poppins">
-                              <h2 className="text-center pb-4 poppins-semibold m-0">
+                              <h2 className="text-center pb-4 poppins-semibold m-0 textColor">
                                 Request a quote
                               </h2>
                               <div className="quoteContainer">
