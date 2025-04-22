@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./claim.css"; // Ensure you have this CSS file
 import "../../../src/App.css";
 import { useState } from "react";
+import axios from "axios";
 export const Claims = () => {
   const [selectedType, setSelectedType] = useState("Health");
-
+  const [claim, setclaim] = useState(null);
   const claimTypes = [
     { name: "Health", icon: "bi-heart-pulse" },
     { name: "Life", icon: "bi-car-front-fill" },
     { name: "Motor", icon: "bi-car-front-fill" },
     { name: "Travel", icon: "bi-globe-americas" },
   ];
+
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:2000/assets")
+      .then((res) => {
+        setclaim(res.data.logo);
+      })
+      .catch((err) => {
+        console.log("Error fetching logo:", err);
+      });
+  }, []);
 
   return (
     <div>
@@ -59,26 +71,28 @@ export const Claims = () => {
               <div className="circleOuter"></div>
               <div className="circle"></div>
               <div className="center-image">
-                <img src="/src/assets/handshake.jpeg" alt="Handshake" />
+                <img src={claim?.url1} alt="Claim Image" />
+
+                {/* <img src="/src/assets/handshake.jpeg" alt="Handshake" /> */}
               </div>
 
               <div className="icon" style={{ top: "7%", left: "43%" }}>
                 <i className="bi bi-person-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "90%" }}>
-                <i class="bi bi-clock-history"></i>
+                <i className="bi bi-clock-history"></i>
               </div>
               <div className="icon" style={{ bottom: "-4%", left: "45%" }}>
-                <i class="bi bi-check-circle-fill"></i>
+                <i className="bi bi-check-circle-fill"></i>
               </div>
               <div className="icon" style={{ top: "25%", left: "-2%" }}>
-                <i class="bi bi-geo-alt-fill"></i>
+                <i className="bi bi-geo-alt-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "74%" }}>
-                <i class="bi bi-clipboard-check-fill"></i>
+                <i className="bi bi-clipboard-check-fill"></i>
               </div>
               <div className="icon" style={{ bottom: "25%", left: "14%" }}>
-                <i class="bi bi-people-fill"></i>
+                <i className="bi bi-people-fill"></i>
               </div>
             </div>
           </div>
@@ -103,7 +117,7 @@ export const Claims = () => {
               <div className="claimType">
                 <span className="step">1</span>
                 <span className="claimIcon">
-                  <i class="bi bi-clipboard2-check"></i>
+                  <i className="bi bi-clipboard2-check"></i>
                 </span>
               </div>
               <h4>Claim Reporting</h4>
@@ -116,7 +130,7 @@ export const Claims = () => {
               <div className="claimType">
                 <span className="step">2</span>
                 <span className="claimIcon">
-                  <i class="bi bi-file-text"></i>
+                  <i className="bi bi-file-text"></i>
                 </span>
               </div>
               <h4>Document Submission</h4>
@@ -129,7 +143,7 @@ export const Claims = () => {
               <div className="claimType">
                 <span className="step">3</span>
                 <span className="claimIcon">
-                  <i class="bi bi-check2-square"></i>
+                  <i className="bi bi-check2-square"></i>
                 </span>
               </div>
               <h4>Claim Settlement</h4>
