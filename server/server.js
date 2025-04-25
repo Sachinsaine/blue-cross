@@ -57,6 +57,17 @@ app.get("/assets", async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
+app.get("/assets", async (req, res) => {
+  try {
+    const doc = await getDatabase()
+      .collection("tbl-assets")
+      .findOne({ type: "claim01" });
+    res.json(doc || { message: "claim image not found" });
+  } catch (error) {
+    console.error("Database error:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
 
 app.get("/carousel", async (req, res) => {
   try {
@@ -108,28 +119,6 @@ app.get("/aboutInsurances", async (req, res) => {
     console.error("Error fetching about insurances data:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
-});
-
-app.post("/adduser", (req, res) => {
-  var user = {
-    full_name: req.body.full_name,
-    countryName: req.body.countryName,
-    dialingCode: req.body.dialingCode,
-    mobile_number: req.body.mobile_number,
-    email: req.body.email,
-    message: req.body.message,
-  };
-  mongoClient.connect(conString).then((clientObj) => {
-    var database = clientObj.db("mern-blog");
-    database
-      .collection("tbl-users")
-      .insertOne(user)
-      .then(() => {
-        console.log("user added successfully");
-        res.redirect("/users");
-        res.end();
-      });
-  });
 });
 
 connectDB()

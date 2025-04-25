@@ -17,7 +17,8 @@ export const Claims = () => {
     axios
       .get("http://127.0.0.1:2000/assets")
       .then((res) => {
-        setclaim(res.data.logo);
+        setclaim(res.data.url1); // url1 will be from claim01
+        console.log(res);
       })
       .catch((err) => {
         console.log("Error fetching logo:", err);
